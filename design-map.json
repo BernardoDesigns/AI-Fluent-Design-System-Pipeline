@@ -50,8 +50,8 @@
           "resolvedType": "COLOR",
           "codeToken": "--primary",
           "tailwindKey": "primary",
-          "values": { "light": "#171717", "dark": "#F5F5F5" },
-          "aliasOf": "brand-neutrals/900",
+          "values": { "light": "#2563EB", "dark": "#F5F5F5" },
+          "aliasOf": "brand-shades/600",
           "description": "Primary action color"
         },
         "general/primary-foreground": {
@@ -617,6 +617,16 @@
       ],
       "componentsChanged": [],
       "notes": "Generated CSS custom property files from design-map.json for all three token collections. Files written to src/styles/: semantic-colors.css (28 tokens, light/:root + dark/.dark), spacing.css (11 tokens, :root), border-radius.css (10 tokens, :root)."
+    },
+    {
+      "timestamp": "2026-03-11T00:00:00Z",
+      "direction": "figma-to-code",
+      "action": "drift-sync",
+      "tokensChanged": [
+        "general/primary"
+      ],
+      "componentsChanged": [],
+      "notes": "Compared all 28 semantic color tokens against live Figma variables. 1 drift detected: general/primary light value changed from #171717 (brand-neutrals/900) to #2563EB (brand-shades/600). Updated design-map.json, src/app/globals.css, and src/styles/semantic-colors.css."
     }
   ]
 }
