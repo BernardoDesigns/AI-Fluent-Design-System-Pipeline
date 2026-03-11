@@ -1,0 +1,14 @@
+/* Border radius tokens — generated from design-map.json */
+
+:root {
+  --radius-none: 0px;     /* No rounding */
+  --radius-xs: 2px;       /* Extra small rounding */
+  --radius-sm: 4px;       /* Small rounding */
+  --radius-md: 6px;       /* Medium rounding */
+  --radius-lg: 8px;       /* Large rounding */
+  --radius: 10px;         /* Default border radius */
+  --radius-xl: 12px;      /* Extra large rounding */
+  --radius-2xl: 16px;     /* 2x extra large rounding */
+  --radius-3xl: 24px;     /* 3x extra large rounding */
+  --radius-full: 9999px;  /* Full pill rounding */
+}

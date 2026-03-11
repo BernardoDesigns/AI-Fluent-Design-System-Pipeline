@@ -605,6 +605,18 @@
       "tokensChanged": [],
       "componentsChanged": [],
       "notes": "Populated with real Figma variable IDs from Bernardo Designs System file. Token collections: semantic-colors (54 vars, light/dark), spacing (27 vars), border-radii (10 vars). Component keys still need to be pulled via figma_get_component."
+    },
+    {
+      "timestamp": "2026-03-11T00:00:00Z",
+      "direction": "figma-to-code",
+      "action": "generate-css",
+      "tokensChanged": [
+        "semantic-colors",
+        "spacing",
+        "border-radii"
+      ],
+      "componentsChanged": [],
+      "notes": "Generated CSS custom property files from design-map.json for all three token collections. Files written to src/styles/: semantic-colors.css (28 tokens, light/:root + dark/.dark), spacing.css (11 tokens, :root), border-radius.css (10 tokens, :root)."
     }
   ]
 }

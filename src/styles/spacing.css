@@ -1,0 +1,15 @@
+/* Spacing tokens — generated from design-map.json */
+
+:root {
+  --spacing-3xs: 2px;   /* 3x extra small spacing */
+  --spacing-2xs: 4px;   /* 2x extra small spacing */
+  --spacing-xs: 8px;    /* Extra small spacing */
+  --spacing-sm: 12px;   /* Small spacing */
+  --spacing-md: 16px;   /* Medium spacing, base unit */
+  --spacing-lg: 20px;   /* Large spacing */
+  --spacing-xl: 24px;   /* Extra large spacing */
+  --spacing-2xl: 32px;  /* 2x extra large spacing */
+  --spacing-3xl: 40px;  /* 3x extra large spacing */
+  --spacing-4xl: 48px;  /* 4x extra large spacing */
+  --spacing-5xl: 64px;  /* 5x extra large spacing */
+}

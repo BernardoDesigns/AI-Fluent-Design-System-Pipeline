@@ -1,0 +1,85 @@
+/* Semantic color tokens — generated from design-map.json */
+
+/* -------------------------
+   Light mode
+   ------------------------- */
+:root {
+  /* General */
+  --background: #FFFFFF;             /* Default page background */
+  --foreground: #0A0A0A;             /* Default text color */
+  --primary: #171717;                /* Primary action color */
+  --primary-foreground: #FAFAFA;     /* Text on primary backgrounds */
+  --secondary: #F5F5F5;              /* Secondary action color */
+  --secondary-foreground: #171717;   /* Text on secondary backgrounds */
+  --muted: #F5F5F5;                  /* Subdued background for secondary content */
+  --muted-foreground: #737373;       /* Text on muted backgrounds */
+  --accent: #F5F5F5;                 /* Accent background */
+  --accent-foreground: #171717;      /* Text on accent backgrounds */
+  --destructive: #DC2626;            /* Danger and error states */
+  --destructive-foreground: #FFFFFF; /* Text on destructive backgrounds */
+  --border: #E5E5E5;                 /* Default border color */
+  --input: #FFFFFF;                  /* Input background */
+
+  /* Focus */
+  --ring: #D4D4D4;                   /* Focus ring color */
+
+  /* Card */
+  --card: #FFFFFF;                   /* Card background */
+  --card-foreground: #0A0A0A;        /* Text on card backgrounds */
+
+  /* Popover */
+  --popover: #000000;                /* Popover background */
+  --popover-foreground: #FFFFFF;     /* Text on popover backgrounds */
+
+  /* Sidebar */
+  --sidebar: #FAFAFA;                /* Sidebar background */
+  --sidebar-foreground: #404040;     /* Sidebar text color */
+  --sidebar-primary: #171717;        /* Sidebar primary action color */
+  --sidebar-primary-foreground: #FAFAFA; /* Text on sidebar primary */
+  --sidebar-accent: #F5F5F5;         /* Sidebar accent background */
+  --sidebar-accent-foreground: #171717;  /* Text on sidebar accent */
+  --sidebar-border: #E5E5E5;         /* Sidebar border color */
+  --sidebar-ring: #D4D4D4;           /* Sidebar focus ring */
+}
+
+/* -------------------------
+   Dark mode
+   ------------------------- */
+.dark {
+  /* General */
+  --background: #000000;             /* Default page background */
+  --foreground: #FAFAFA;             /* Default text color */
+  --primary: #F5F5F5;                /* Primary action color */
+  --primary-foreground: #0A0A0A;     /* Text on primary backgrounds */
+  --secondary: #262626;              /* Secondary action color */
+  --secondary-foreground: #F5F5F5;   /* Text on secondary backgrounds */
+  --muted: #171717;                  /* Subdued background for secondary content */
+  --muted-foreground: #A3A3A3;       /* Text on muted backgrounds */
+  --accent: #171717;                 /* Accent background */
+  --accent-foreground: #F5F5F5;      /* Text on accent backgrounds */
+  --destructive: #9E4042;            /* Danger and error states */
+  --destructive-foreground: #FFFFFF; /* Text on destructive backgrounds */
+  --border: #404040;                 /* Default border color */
+  --input: #FFFFFF0D;                /* Input background */
+
+  /* Focus */
+  --ring: #404040;                   /* Focus ring color */
+
+  /* Card */
+  --card: #171717;                   /* Card background */
+  --card-foreground: #FFFFFF;        /* Text on card backgrounds */
+
+  /* Popover */
+  --popover: #FFFFFF;                /* Popover background */
+  --popover-foreground: #000000;     /* Text on popover backgrounds */
+
+  /* Sidebar */
+  --sidebar: #0A0A0A;                /* Sidebar background */
+  --sidebar-foreground: #D4D4D4;     /* Sidebar text color */
+  --sidebar-primary: #FAFAFA;        /* Sidebar primary action color */
+  --sidebar-primary-foreground: #171717; /* Text on sidebar primary */
+  --sidebar-accent: #171717;         /* Sidebar accent background */
+  --sidebar-accent-foreground: #F5F5F5;  /* Text on sidebar accent */
+  --sidebar-border: #262626;         /* Sidebar border color */
+  --sidebar-ring: #404040;           /* Sidebar focus ring */
+}
