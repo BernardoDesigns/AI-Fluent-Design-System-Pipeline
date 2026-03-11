@@ -1,1 +1,610 @@
-{"type":"error","error":{"type":"not_found_error","message":"File not found in container: /mnt/user-data/outputs/design-map.json","details":{"error_visibility":"user_facing"}},"request_id":"req_011CYwjPRKX3nw2xf9jQGc8Q"}
+{
+  "$schema": "design-map-v1",
+  "version": "1.0.0",
+  "lastSynced": "2026-03-12T00:00:00Z",
+  "lastSyncDirection": "figma-to-code",
+
+  "meta": {
+    "projectName": "Bernardo Designs",
+    "figmaFileKey": "oodzXY4lwyWIu5qK05VTP7",
+    "figmaFileName": "Bernardo Designs System",
+    "repository": "https://github.com/BernardoDesigns/design-system-poc",
+    "codeFramework": "react",
+    "uiLibrary": "shadcn-ui",
+    "cssStrategy": "tailwind",
+    "storybook": true
+  },
+
+  "collections": {
+    "semantic-colors": {
+      "figmaCollectionId": "VariableCollectionId:618:31273",
+      "figmaCollectionName": "semantic colors",
+      "modes": {
+        "light": { "figmaModeId": "618:0", "cssSelector": ":root" },
+        "dark": { "figmaModeId": "618:1", "cssSelector": ".dark" }
+      },
+      "tokens": {
+        "general/background": {
+          "figmaVariableId": "VariableID:618:31274",
+          "figmaName": "background",
+          "resolvedType": "COLOR",
+          "codeToken": "--background",
+          "tailwindKey": "background",
+          "values": { "light": "#FFFFFF", "dark": "#000000" },
+          "aliasOf": "white/alpha-100",
+          "description": "Default page background"
+        },
+        "general/foreground": {
+          "figmaVariableId": "VariableID:618:31275",
+          "figmaName": "foreground",
+          "resolvedType": "COLOR",
+          "codeToken": "--foreground",
+          "tailwindKey": "foreground",
+          "values": { "light": "#0A0A0A", "dark": "#FAFAFA" },
+          "aliasOf": "brand-neutrals/950",
+          "description": "Default text color"
+        },
+        "general/primary": {
+          "figmaVariableId": "VariableID:618:31276",
+          "figmaName": "primary",
+          "resolvedType": "COLOR",
+          "codeToken": "--primary",
+          "tailwindKey": "primary",
+          "values": { "light": "#171717", "dark": "#F5F5F5" },
+          "aliasOf": "brand-neutrals/900",
+          "description": "Primary action color"
+        },
+        "general/primary-foreground": {
+          "figmaVariableId": "VariableID:618:31277",
+          "figmaName": "primary foreground",
+          "resolvedType": "COLOR",
+          "codeToken": "--primary-foreground",
+          "tailwindKey": "primary-foreground",
+          "values": { "light": "#FAFAFA", "dark": "#0A0A0A" },
+          "aliasOf": "brand-neutrals/50",
+          "description": "Text on primary backgrounds"
+        },
+        "general/secondary": {
+          "figmaVariableId": "VariableID:618:31278",
+          "figmaName": "secondary",
+          "resolvedType": "COLOR",
+          "codeToken": "--secondary",
+          "tailwindKey": "secondary",
+          "values": { "light": "#F5F5F5", "dark": "#262626" },
+          "aliasOf": "brand-neutrals/100",
+          "description": "Secondary action color"
+        },
+        "general/secondary-foreground": {
+          "figmaVariableId": "VariableID:618:31279",
+          "figmaName": "secondary foreground",
+          "resolvedType": "COLOR",
+          "codeToken": "--secondary-foreground",
+          "tailwindKey": "secondary-foreground",
+          "values": { "light": "#171717", "dark": "#F5F5F5" },
+          "aliasOf": "brand-neutrals/900",
+          "description": "Text on secondary backgrounds"
+        },
+        "general/muted": {
+          "figmaVariableId": "VariableID:618:31280",
+          "figmaName": "muted",
+          "resolvedType": "COLOR",
+          "codeToken": "--muted",
+          "tailwindKey": "muted",
+          "values": { "light": "#F5F5F5", "dark": "#171717" },
+          "aliasOf": "brand-neutrals/100",
+          "description": "Subdued background for secondary content"
+        },
+        "general/muted-foreground": {
+          "figmaVariableId": "VariableID:618:31281",
+          "figmaName": "muted foreground",
+          "resolvedType": "COLOR",
+          "codeToken": "--muted-foreground",
+          "tailwindKey": "muted-foreground",
+          "values": { "light": "#737373", "dark": "#A3A3A3" },
+          "aliasOf": "brand-neutrals/500",
+          "description": "Text on muted backgrounds"
+        },
+        "general/accent": {
+          "figmaVariableId": "VariableID:618:31282",
+          "figmaName": "accent",
+          "resolvedType": "COLOR",
+          "codeToken": "--accent",
+          "tailwindKey": "accent",
+          "values": { "light": "#F5F5F5", "dark": "#171717" },
+          "aliasOf": "brand-neutrals/100",
+          "description": "Accent background"
+        },
+        "general/accent-foreground": {
+          "figmaVariableId": "VariableID:618:31283",
+          "figmaName": "accent foreground",
+          "resolvedType": "COLOR",
+          "codeToken": "--accent-foreground",
+          "tailwindKey": "accent-foreground",
+          "values": { "light": "#171717", "dark": "#F5F5F5" },
+          "aliasOf": "brand-neutrals/900",
+          "description": "Text on accent backgrounds"
+        },
+        "general/destructive": {
+          "figmaVariableId": "VariableID:618:31284",
+          "figmaName": "destructive",
+          "resolvedType": "COLOR",
+          "codeToken": "--destructive",
+          "tailwindKey": "destructive",
+          "values": { "light": "#DC2626", "dark": "#9E4042" },
+          "aliasOf": "red/600",
+          "description": "Danger and error states"
+        },
+        "general/destructive-foreground": {
+          "figmaVariableId": "VariableID:625:31535",
+          "figmaName": "destructive foreground",
+          "resolvedType": "COLOR",
+          "codeToken": "--destructive-foreground",
+          "tailwindKey": "destructive-foreground",
+          "values": { "light": "#FFFFFF", "dark": "#FFFFFF" },
+          "aliasOf": "white/alpha-100",
+          "description": "Text on destructive backgrounds"
+        },
+        "general/border": {
+          "figmaVariableId": "VariableID:618:31285",
+          "figmaName": "border",
+          "resolvedType": "COLOR",
+          "codeToken": "--border",
+          "tailwindKey": "border",
+          "values": { "light": "#E5E5E5", "dark": "#404040" },
+          "aliasOf": "brand-neutrals/200",
+          "description": "Default border color"
+        },
+        "general/input": {
+          "figmaVariableId": "VariableID:618:31286",
+          "figmaName": "input",
+          "resolvedType": "COLOR",
+          "codeToken": "--input",
+          "tailwindKey": "input",
+          "values": { "light": "#FFFFFF", "dark": "#FFFFFF0D" },
+          "aliasOf": "white/alpha-100",
+          "description": "Input background"
+        },
+        "focus/ring": {
+          "figmaVariableId": "VariableID:618:31287",
+          "figmaName": "ring",
+          "resolvedType": "COLOR",
+          "codeToken": "--ring",
+          "tailwindKey": "ring",
+          "values": { "light": "#D4D4D4", "dark": "#404040" },
+          "aliasOf": "brand-neutrals/300",
+          "description": "Focus ring color"
+        },
+        "card/card": {
+          "figmaVariableId": "VariableID:618:31288",
+          "figmaName": "card",
+          "resolvedType": "COLOR",
+          "codeToken": "--card",
+          "tailwindKey": "card",
+          "values": { "light": "#FFFFFF", "dark": "#171717" },
+          "aliasOf": "white/alpha-100",
+          "description": "Card background"
+        },
+        "card/card-foreground": {
+          "figmaVariableId": "VariableID:618:31289",
+          "figmaName": "card foreground",
+          "resolvedType": "COLOR",
+          "codeToken": "--card-foreground",
+          "tailwindKey": "card-foreground",
+          "values": { "light": "#0A0A0A", "dark": "#FFFFFF" },
+          "aliasOf": "brand-neutrals/950",
+          "description": "Text on card backgrounds"
+        },
+        "popover/popover": {
+          "figmaVariableId": "VariableID:618:31290",
+          "figmaName": "popover",
+          "resolvedType": "COLOR",
+          "codeToken": "--popover",
+          "tailwindKey": "popover",
+          "values": { "light": "#000000", "dark": "#FFFFFF" },
+          "aliasOf": "black/alpha-100",
+          "description": "Popover background"
+        },
+        "popover/popover-foreground": {
+          "figmaVariableId": "VariableID:618:31291",
+          "figmaName": "popover foreground",
+          "resolvedType": "COLOR",
+          "codeToken": "--popover-foreground",
+          "tailwindKey": "popover-foreground",
+          "values": { "light": "#FFFFFF", "dark": "#000000" },
+          "aliasOf": "white/alpha-100",
+          "description": "Text on popover backgrounds"
+        },
+        "sidebar/sidebar": {
+          "figmaVariableId": "VariableID:643:77395",
+          "figmaName": "sidebar",
+          "resolvedType": "COLOR",
+          "codeToken": "--sidebar",
+          "tailwindKey": "sidebar",
+          "values": { "light": "#FAFAFA", "dark": "#0A0A0A" },
+          "aliasOf": "brand-neutrals/50",
+          "description": "Sidebar background"
+        },
+        "sidebar/sidebar-foreground": {
+          "figmaVariableId": "VariableID:643:77390",
+          "figmaName": "sidebar foreground",
+          "resolvedType": "COLOR",
+          "codeToken": "--sidebar-foreground",
+          "tailwindKey": "sidebar-foreground",
+          "values": { "light": "#404040", "dark": "#D4D4D4" },
+          "aliasOf": "brand-neutrals/700",
+          "description": "Sidebar text color"
+        },
+        "sidebar/sidebar-primary": {
+          "figmaVariableId": "VariableID:643:77392",
+          "figmaName": "sidebar primary",
+          "resolvedType": "COLOR",
+          "codeToken": "--sidebar-primary",
+          "tailwindKey": "sidebar-primary",
+          "values": { "light": "#171717", "dark": "#FAFAFA" },
+          "aliasOf": "brand-neutrals/900",
+          "description": "Sidebar primary action color"
+        },
+        "sidebar/sidebar-primary-foreground": {
+          "figmaVariableId": "VariableID:643:77393",
+          "figmaName": "sidebar primary foreground",
+          "resolvedType": "COLOR",
+          "codeToken": "--sidebar-primary-foreground",
+          "tailwindKey": "sidebar-primary-foreground",
+          "values": { "light": "#FAFAFA", "dark": "#171717" },
+          "aliasOf": "brand-neutrals/50",
+          "description": "Text on sidebar primary"
+        },
+        "sidebar/sidebar-accent": {
+          "figmaVariableId": "VariableID:643:77391",
+          "figmaName": "sidebar accent",
+          "resolvedType": "COLOR",
+          "codeToken": "--sidebar-accent",
+          "tailwindKey": "sidebar-accent",
+          "values": { "light": "#F5F5F5", "dark": "#171717" },
+          "aliasOf": "brand-neutrals/100",
+          "description": "Sidebar accent background"
+        },
+        "sidebar/sidebar-accent-foreground": {
+          "figmaVariableId": "VariableID:643:77394",
+          "figmaName": "sidebar accent foreground",
+          "resolvedType": "COLOR",
+          "codeToken": "--sidebar-accent-foreground",
+          "tailwindKey": "sidebar-accent-foreground",
+          "values": { "light": "#171717", "dark": "#F5F5F5" },
+          "aliasOf": "brand-neutrals/900",
+          "description": "Text on sidebar accent"
+        },
+        "sidebar/sidebar-border": {
+          "figmaVariableId": "VariableID:643:77396",
+          "figmaName": "sidebar border",
+          "resolvedType": "COLOR",
+          "codeToken": "--sidebar-border",
+          "tailwindKey": "sidebar-border",
+          "values": { "light": "#E5E5E5", "dark": "#262626" },
+          "aliasOf": "brand-neutrals/200",
+          "description": "Sidebar border color"
+        },
+        "sidebar/sidebar-ring": {
+          "figmaVariableId": "VariableID:643:77397",
+          "figmaName": "sidebar ring",
+          "resolvedType": "COLOR",
+          "codeToken": "--sidebar-ring",
+          "tailwindKey": "sidebar-ring",
+          "values": { "light": "#D4D4D4", "dark": "#404040" },
+          "aliasOf": "brand-neutrals/300",
+          "description": "Sidebar focus ring"
+        }
+      }
+    },
+
+    "spacing": {
+      "figmaCollectionId": "VariableCollectionId:596:42579",
+      "figmaCollectionName": "spacing",
+      "modes": {
+        "default": { "figmaModeId": "899:1", "cssSelector": ":root" }
+      },
+      "tokens": {
+        "spacing/3xs": {
+          "figmaVariableId": "VariableID:596:42582",
+          "figmaName": "3xs",
+          "resolvedType": "FLOAT",
+          "codeToken": "--spacing-3xs",
+          "tailwindKey": "spacing.0.5",
+          "values": { "default": 2 },
+          "unit": "px",
+          "aliasOf": "0,5",
+          "description": "3x extra small spacing"
+        },
+        "spacing/2xs": {
+          "figmaVariableId": "VariableID:596:42583",
+          "figmaName": "2xs",
+          "resolvedType": "FLOAT",
+          "codeToken": "--spacing-2xs",
+          "tailwindKey": "spacing.1",
+          "values": { "default": 4 },
+          "unit": "px",
+          "aliasOf": "1",
+          "description": "2x extra small spacing"
+        },
+        "spacing/xs": {
+          "figmaVariableId": "VariableID:596:42585",
+          "figmaName": "xs",
+          "resolvedType": "FLOAT",
+          "codeToken": "--spacing-xs",
+          "tailwindKey": "spacing.2",
+          "values": { "default": 8 },
+          "unit": "px",
+          "aliasOf": "2",
+          "description": "Extra small spacing"
+        },
+        "spacing/sm": {
+          "figmaVariableId": "VariableID:1252:94705",
+          "figmaName": "sm",
+          "resolvedType": "FLOAT",
+          "codeToken": "--spacing-sm",
+          "tailwindKey": "spacing.3",
+          "values": { "default": 12 },
+          "unit": "px",
+          "aliasOf": "3",
+          "description": "Small spacing"
+        },
+        "spacing/md": {
+          "figmaVariableId": "VariableID:596:42589",
+          "figmaName": "md",
+          "resolvedType": "FLOAT",
+          "codeToken": "--spacing-md",
+          "tailwindKey": "spacing.4",
+          "values": { "default": 16 },
+          "unit": "px",
+          "aliasOf": "4",
+          "description": "Medium spacing, base unit"
+        },
+        "spacing/lg": {
+          "figmaVariableId": "VariableID:596:42590",
+          "figmaName": "lg",
+          "resolvedType": "FLOAT",
+          "codeToken": "--spacing-lg",
+          "tailwindKey": "spacing.5",
+          "values": { "default": 20 },
+          "unit": "px",
+          "aliasOf": "5",
+          "description": "Large spacing"
+        },
+        "spacing/xl": {
+          "figmaVariableId": "VariableID:596:42591",
+          "figmaName": "xl",
+          "resolvedType": "FLOAT",
+          "codeToken": "--spacing-xl",
+          "tailwindKey": "spacing.6",
+          "values": { "default": 24 },
+          "unit": "px",
+          "aliasOf": "6",
+          "description": "Extra large spacing"
+        },
+        "spacing/2xl": {
+          "figmaVariableId": "VariableID:596:42593",
+          "figmaName": "2xl",
+          "resolvedType": "FLOAT",
+          "codeToken": "--spacing-2xl",
+          "tailwindKey": "spacing.8",
+          "values": { "default": 32 },
+          "unit": "px",
+          "aliasOf": "8",
+          "description": "2x extra large spacing"
+        },
+        "spacing/3xl": {
+          "figmaVariableId": "VariableID:596:42595",
+          "figmaName": "3xl",
+          "resolvedType": "FLOAT",
+          "codeToken": "--spacing-3xl",
+          "tailwindKey": "spacing.10",
+          "values": { "default": 40 },
+          "unit": "px",
+          "aliasOf": "10",
+          "description": "3x extra large spacing"
+        },
+        "spacing/4xl": {
+          "figmaVariableId": "VariableID:596:42597",
+          "figmaName": "4xl",
+          "resolvedType": "FLOAT",
+          "codeToken": "--spacing-4xl",
+          "tailwindKey": "spacing.12",
+          "values": { "default": 48 },
+          "unit": "px",
+          "aliasOf": "12",
+          "description": "4x extra large spacing"
+        },
+        "spacing/5xl": {
+          "figmaVariableId": "VariableID:596:42599",
+          "figmaName": "5xl",
+          "resolvedType": "FLOAT",
+          "codeToken": "--spacing-5xl",
+          "tailwindKey": "spacing.16",
+          "values": { "default": 64 },
+          "unit": "px",
+          "aliasOf": "16",
+          "description": "5x extra large spacing"
+        }
+      }
+    },
+
+    "border-radii": {
+      "figmaCollectionId": "VariableCollectionId:596:2",
+      "figmaCollectionName": "border radii",
+      "modes": {
+        "default": { "figmaModeId": "851:3", "cssSelector": ":root" }
+      },
+      "tokens": {
+        "radius/none": {
+          "figmaVariableId": "VariableID:844:1251290",
+          "figmaName": "rounded-none",
+          "resolvedType": "FLOAT",
+          "codeToken": "--radius-none",
+          "tailwindKey": "borderRadius.none",
+          "values": { "default": 0 },
+          "unit": "px",
+          "aliasOf": null,
+          "description": "No rounding"
+        },
+        "radius/xs": {
+          "figmaVariableId": "VariableID:843:105987",
+          "figmaName": "rounded-xs",
+          "resolvedType": "FLOAT",
+          "codeToken": "--radius-xs",
+          "tailwindKey": "borderRadius.xs",
+          "values": { "default": 2 },
+          "unit": "px",
+          "aliasOf": "radius-2",
+          "description": "Extra small rounding"
+        },
+        "radius/sm": {
+          "figmaVariableId": "VariableID:843:168381",
+          "figmaName": "rounded-sm",
+          "resolvedType": "FLOAT",
+          "codeToken": "--radius-sm",
+          "tailwindKey": "borderRadius.sm",
+          "values": { "default": 4 },
+          "unit": "px",
+          "aliasOf": "radius-4",
+          "description": "Small rounding"
+        },
+        "radius/md": {
+          "figmaVariableId": "VariableID:843:105990",
+          "figmaName": "rounded-md",
+          "resolvedType": "FLOAT",
+          "codeToken": "--radius-md",
+          "tailwindKey": "borderRadius.md",
+          "values": { "default": 6 },
+          "unit": "px",
+          "aliasOf": "radius-6",
+          "description": "Medium rounding"
+        },
+        "radius/lg": {
+          "figmaVariableId": "VariableID:843:105988",
+          "figmaName": "rounded-lg",
+          "resolvedType": "FLOAT",
+          "codeToken": "--radius-lg",
+          "tailwindKey": "borderRadius.lg",
+          "values": { "default": 8 },
+          "unit": "px",
+          "aliasOf": "radius-8",
+          "description": "Large rounding"
+        },
+        "radius/default": {
+          "figmaVariableId": "VariableID:1252:94709",
+          "figmaName": "radius",
+          "resolvedType": "FLOAT",
+          "codeToken": "--radius",
+          "tailwindKey": "borderRadius.DEFAULT",
+          "values": { "default": 10 },
+          "unit": "px",
+          "aliasOf": "radius-10",
+          "description": "Default border radius"
+        },
+        "radius/xl": {
+          "figmaVariableId": "VariableID:843:105989",
+          "figmaName": "rounded-xl",
+          "resolvedType": "FLOAT",
+          "codeToken": "--radius-xl",
+          "tailwindKey": "borderRadius.xl",
+          "values": { "default": 12 },
+          "unit": "px",
+          "aliasOf": "radius-12",
+          "description": "Extra large rounding"
+        },
+        "radius/2xl": {
+          "figmaVariableId": "VariableID:845:1251293",
+          "figmaName": "rounded-2xl",
+          "resolvedType": "FLOAT",
+          "codeToken": "--radius-2xl",
+          "tailwindKey": "borderRadius.2xl",
+          "values": { "default": 16 },
+          "unit": "px",
+          "aliasOf": "radius-16",
+          "description": "2x extra large rounding"
+        },
+        "radius/3xl": {
+          "figmaVariableId": "VariableID:845:1251294",
+          "figmaName": "rounded-3xl",
+          "resolvedType": "FLOAT",
+          "codeToken": "--radius-3xl",
+          "tailwindKey": "borderRadius.3xl",
+          "values": { "default": 24 },
+          "unit": "px",
+          "aliasOf": "radius-24",
+          "description": "3x extra large rounding"
+        },
+        "radius/full": {
+          "figmaVariableId": "VariableID:843:168382",
+          "figmaName": "rounded-full",
+          "resolvedType": "FLOAT",
+          "codeToken": "--radius-full",
+          "tailwindKey": "borderRadius.full",
+          "values": { "default": 9999 },
+          "unit": "px",
+          "aliasOf": "radius-infinite",
+          "description": "Full pill rounding"
+        }
+      }
+    }
+  },
+
+  "components": {
+    "button": {
+      "figmaComponentKey": "PLACEHOLDER_PULL_VIA_MCP",
+      "figmaNodeId": "PLACEHOLDER_PULL_VIA_MCP",
+      "figmaName": "Button",
+      "codePath": "src/components/ui/button.tsx",
+      "shadcnComponent": "Button",
+      "storyPath": "src/components/ui/button.stories.tsx",
+      "variants": {
+        "variant": {
+          "figmaPropertyName": "Variant",
+          "codePropName": "variant",
+          "options": {
+            "Default": "default",
+            "Destructive": "destructive",
+            "Outline": "outline",
+            "Secondary": "secondary",
+            "Ghost": "ghost",
+            "Link": "link"
+          }
+        },
+        "size": {
+          "figmaPropertyName": "Size",
+          "codePropName": "size",
+          "options": {
+            "Default": "default",
+            "Small": "sm",
+            "Large": "lg",
+            "Icon": "icon"
+          }
+        }
+      },
+      "lastSynced": null,
+      "status": "figma-only"
+    },
+    "card": {
+      "figmaComponentKey": "PLACEHOLDER_PULL_VIA_MCP",
+      "figmaNodeId": "PLACEHOLDER_PULL_VIA_MCP",
+      "figmaName": "Card",
+      "codePath": "src/components/ui/card.tsx",
+      "shadcnComponent": "Card",
+      "storyPath": "src/components/ui/card.stories.tsx",
+      "variants": {},
+      "lastSynced": null,
+      "status": "figma-only"
+    }
+  },
+
+  "syncLog": [
+    {
+      "timestamp": "2026-03-12T00:00:00Z",
+      "direction": "figma-to-code",
+      "action": "initial-map",
+      "tokensChanged": [],
+      "componentsChanged": [],
+      "notes": "Populated with real Figma variable IDs from Bernardo Designs System file. Token collections: semantic-colors (54 vars, light/dark), spacing (27 vars), border-radii (10 vars). Component keys still need to be pulled via figma_get_component."
+    }
+  ]
+}
