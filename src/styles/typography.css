@@ -1,0 +1,85 @@
+/* Typography tokens — generated from design-map.json */
+
+:root {
+  /* Font families */
+  --font-family-sans: "Poppins", sans-serif;
+  --font-family-serif: "Source Serif 4", serif;
+  --font-family-monospace: "Geist Mono", monospace;
+  --font-family-headings: var(--font-family-sans);
+  --font-family-body: var(--font-family-sans);
+
+  /* Heading 1 */
+  --heading-1-font-family: var(--font-family-headings);
+  --heading-1-weight: 600;
+  --heading-1-font-size: 48px;
+  --heading-1-line-height: 48px;
+  --heading-1-spacing: 48px;
+  --heading-1-letter-spacing: -1.5px;
+
+  /* Heading 2 */
+  --heading-2-font-family: var(--font-family-headings);
+  --heading-2-weight: 600;
+  --heading-2-font-size: 30px;
+  --heading-2-line-height: 30px;
+  --heading-2-spacing: 30px;
+  --heading-2-letter-spacing: -1px;
+
+  /* Heading 3 */
+  --heading-3-font-family: var(--font-family-headings);
+  --heading-3-weight: 600;
+  --heading-3-font-size: 24px;
+  --heading-3-line-height: 28.8px;
+  --heading-3-spacing: 20px;
+  --heading-3-letter-spacing: -1px;
+
+  /* Heading 4 */
+  --heading-4-font-family: var(--font-family-headings);
+  --heading-4-weight: 600;
+  --heading-4-font-size: 20px;
+  --heading-4-line-height: 24px;
+  --heading-4-spacing: 20px;
+  --heading-4-letter-spacing: 0px;
+
+  /* Paragraph large */
+  --paragraph-large-font-size: 18px;
+  --paragraph-large-line-height: 27px;
+  --paragraph-large-spacing: 18px;
+  --paragraph-large-letter-spacing: 0px;
+
+  /* Paragraph regular */
+  --paragraph-regular-font-size: 16px;
+  --paragraph-regular-line-height: 24px;
+  --paragraph-regular-spacing: 16px;
+  --paragraph-regular-letter-spacing: 0px;
+
+  /* Paragraph small */
+  --paragraph-small-font-size: 14px;
+  --paragraph-small-line-height: 20px;
+  --paragraph-small-spacing: 14px;
+  --paragraph-small-letter-spacing: 0px;
+
+  /* Paragraph mini */
+  --paragraph-mini-font-size: 12px;
+  --paragraph-mini-line-height: 16px;
+  --paragraph-mini-spacing: 12px;
+  --paragraph-mini-letter-spacing: 0px;
+
+  /* Paragraph weights */
+  --paragraph-weight: 400;
+  --paragraph-medium-weight: 500;
+  --paragraph-bold-weight: 600;
+
+  /* Monospaced */
+  --monospaced-font-size: 16px;
+  --monospaced-line-height: 24px;
+  --monospaced-spacing: 16px;
+  --monospaced-letter-spacing: 0px;
+  --monospaced-font-weight: 400;
+
+  /* Caption */
+  --caption-font-size: 14px;
+  --caption-line-height: 21px;
+  --caption-spacing: 14px;
+  --caption-letter-spacing: 1.5px;
+  --caption-font-weight: 400;
+}
