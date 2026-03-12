@@ -554,6 +554,24 @@
       "modes": {
         "default": { "figmaModeId": "845:1", "cssSelector": ":root" }
       },
+      "codeGeneration": {
+        "_note": "Instructions for code generation from typography tokens",
+        "fontImportStrategy": "next/font/google",
+        "fontImportFile": "src/app/layout.tsx",
+        "cssOutputFile": "src/styles/typography.css",
+        "storybookFontFile": ".storybook/preview-head.html",
+        "weightMap": {
+          "Thin": "100",
+          "ExtraLight": "200",
+          "Light": "300",
+          "Regular": "400",
+          "Medium": "500",
+          "Semibold": "600",
+          "Bold": "700",
+          "ExtraBold": "800",
+          "Black": "900"
+        }
+      },
       "tokens": {
         "font-definitions/font-family-sans": {
           "figmaVariableId": "VariableID:845:1253574",
@@ -562,6 +580,7 @@
           "codeToken": "--font-family-sans",
           "tailwindKey": "fontFamily.sans",
           "values": { "default": "Poppins" },
+          "codeFallbacks": "ui-sans-serif, system-ui, sans-serif",
           "aliasOf": null,
           "description": "Sans-serif font family"
         },
@@ -572,6 +591,7 @@
           "codeToken": "--font-family-serif",
           "tailwindKey": "fontFamily.serif",
           "values": { "default": "Source Serif 4" },
+          "codeFallbacks": "ui-serif, Georgia, serif",
           "aliasOf": null,
           "description": "Serif font family"
         },
@@ -582,6 +602,7 @@
           "codeToken": "--font-family-monospace",
           "tailwindKey": "fontFamily.mono",
           "values": { "default": "Geist Mono" },
+          "codeFallbacks": "ui-monospace, monospace",
           "aliasOf": null,
           "description": "Monospace font family"
         },
