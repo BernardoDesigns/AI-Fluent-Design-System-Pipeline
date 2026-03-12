@@ -546,6 +546,636 @@
           "description": "Full pill rounding"
         }
       }
+    },
+
+    "typography": {
+      "figmaCollectionId": "VariableCollectionId:845:1253573",
+      "figmaCollectionName": "typography",
+      "modes": {
+        "default": { "figmaModeId": "845:1", "cssSelector": ":root" }
+      },
+      "tokens": {
+        "font-definitions/font-family-sans": {
+          "figmaVariableId": "VariableID:845:1253574",
+          "figmaName": "font-family-sans",
+          "resolvedType": "STRING",
+          "codeToken": "--font-family-sans",
+          "tailwindKey": "fontFamily.sans",
+          "values": { "default": "Geist" },
+          "aliasOf": null,
+          "description": "Sans-serif font family"
+        },
+        "font-definitions/font-family-serif": {
+          "figmaVariableId": "VariableID:845:1253576",
+          "figmaName": "font-family-serif",
+          "resolvedType": "STRING",
+          "codeToken": "--font-family-serif",
+          "tailwindKey": "fontFamily.serif",
+          "values": { "default": "Geist" },
+          "aliasOf": null,
+          "description": "Serif font family"
+        },
+        "font-definitions/font-family-monospace": {
+          "figmaVariableId": "VariableID:845:1253577",
+          "figmaName": "font-family-monospace",
+          "resolvedType": "STRING",
+          "codeToken": "--font-family-monospace",
+          "tailwindKey": "fontFamily.mono",
+          "values": { "default": "Geist Mono" },
+          "aliasOf": null,
+          "description": "Monospace font family"
+        },
+        "font-definitions/font-family-headings": {
+          "figmaVariableId": "VariableID:845:1253585",
+          "figmaName": "font-family-headings",
+          "resolvedType": "STRING",
+          "codeToken": "--font-family-headings",
+          "tailwindKey": "fontFamily.headings",
+          "values": { "default": "Geist" },
+          "aliasOf": "font definitions/font-family-sans",
+          "description": "Headings font family"
+        },
+        "font-definitions/font-family-body": {
+          "figmaVariableId": "VariableID:845:1253586",
+          "figmaName": "font-family-body",
+          "resolvedType": "STRING",
+          "codeToken": "--font-family-body",
+          "tailwindKey": "fontFamily.body",
+          "values": { "default": "Geist" },
+          "aliasOf": "font definitions/font-family-sans",
+          "description": "Body font family"
+        },
+        "heading-1/font-family": {
+          "figmaVariableId": "VariableID:1595:18179",
+          "figmaName": "font-family",
+          "resolvedType": "STRING",
+          "codeToken": "--heading-1-font-family",
+          "tailwindKey": "fontFamily.h1",
+          "values": { "default": "Geist" },
+          "aliasOf": "font definitions/font-family-headings",
+          "description": "Heading 1 font family"
+        },
+        "heading-1/weight": {
+          "figmaVariableId": "VariableID:845:1253579",
+          "figmaName": "weight",
+          "resolvedType": "STRING",
+          "codeToken": "--heading-1-weight",
+          "tailwindKey": "fontWeight.h1",
+          "values": { "default": "Semibold" },
+          "aliasOf": null,
+          "description": "Heading 1 font weight"
+        },
+        "heading-1/font-size": {
+          "figmaVariableId": "VariableID:847:1253593",
+          "figmaName": "font-size",
+          "resolvedType": "FLOAT",
+          "codeToken": "--heading-1-font-size",
+          "tailwindKey": "fontSize.h1",
+          "values": { "default": 48 },
+          "unit": "px",
+          "aliasOf": null,
+          "description": "Heading 1 font size"
+        },
+        "heading-1/line-height": {
+          "figmaVariableId": "VariableID:847:1253599",
+          "figmaName": "line-height",
+          "resolvedType": "FLOAT",
+          "codeToken": "--heading-1-line-height",
+          "tailwindKey": "lineHeight.h1",
+          "values": { "default": 48 },
+          "unit": "px",
+          "aliasOf": null,
+          "description": "Heading 1 line height"
+        },
+        "heading-1/spacing": {
+          "figmaVariableId": "VariableID:869:7",
+          "figmaName": "spacing",
+          "resolvedType": "FLOAT",
+          "codeToken": "--heading-1-spacing",
+          "tailwindKey": null,
+          "values": { "default": 48 },
+          "unit": "px",
+          "aliasOf": null,
+          "description": "Heading 1 paragraph spacing"
+        },
+        "heading-1/letter-spacing": {
+          "figmaVariableId": "VariableID:869:12",
+          "figmaName": "letter-spacing",
+          "resolvedType": "FLOAT",
+          "codeToken": "--heading-1-letter-spacing",
+          "tailwindKey": "letterSpacing.h1",
+          "values": { "default": -1.5 },
+          "unit": "px",
+          "aliasOf": null,
+          "description": "Heading 1 letter spacing"
+        },
+        "heading-2/font-family": {
+          "figmaVariableId": "VariableID:845:1253580",
+          "figmaName": "font-family",
+          "resolvedType": "STRING",
+          "codeToken": "--heading-2-font-family",
+          "tailwindKey": "fontFamily.h2",
+          "values": { "default": "Geist" },
+          "aliasOf": "font definitions/font-family-headings",
+          "description": "Heading 2 font family"
+        },
+        "heading-2/weight": {
+          "figmaVariableId": "VariableID:1595:18180",
+          "figmaName": "weight",
+          "resolvedType": "STRING",
+          "codeToken": "--heading-2-weight",
+          "tailwindKey": "fontWeight.h2",
+          "values": { "default": "Semibold" },
+          "aliasOf": null,
+          "description": "Heading 2 font weight"
+        },
+        "heading-2/font-size": {
+          "figmaVariableId": "VariableID:847:1253594",
+          "figmaName": "font-size",
+          "resolvedType": "FLOAT",
+          "codeToken": "--heading-2-font-size",
+          "tailwindKey": "fontSize.h2",
+          "values": { "default": 30 },
+          "unit": "px",
+          "aliasOf": null,
+          "description": "Heading 2 font size"
+        },
+        "heading-2/line-height": {
+          "figmaVariableId": "VariableID:847:1253600",
+          "figmaName": "line-height",
+          "resolvedType": "FLOAT",
+          "codeToken": "--heading-2-line-height",
+          "tailwindKey": "lineHeight.h2",
+          "values": { "default": 30 },
+          "unit": "px",
+          "aliasOf": null,
+          "description": "Heading 2 line height"
+        },
+        "heading-2/spacing": {
+          "figmaVariableId": "VariableID:869:8",
+          "figmaName": "spacing",
+          "resolvedType": "FLOAT",
+          "codeToken": "--heading-2-spacing",
+          "tailwindKey": null,
+          "values": { "default": 30 },
+          "unit": "px",
+          "aliasOf": null,
+          "description": "Heading 2 paragraph spacing"
+        },
+        "heading-2/letter-spacing": {
+          "figmaVariableId": "VariableID:869:13",
+          "figmaName": "letter-spacing",
+          "resolvedType": "FLOAT",
+          "codeToken": "--heading-2-letter-spacing",
+          "tailwindKey": "letterSpacing.h2",
+          "values": { "default": -1 },
+          "unit": "px",
+          "aliasOf": null,
+          "description": "Heading 2 letter spacing"
+        },
+        "heading-3/font-family": {
+          "figmaVariableId": "VariableID:1595:18181",
+          "figmaName": "font-family",
+          "resolvedType": "STRING",
+          "codeToken": "--heading-3-font-family",
+          "tailwindKey": "fontFamily.h3",
+          "values": { "default": "Geist" },
+          "aliasOf": "font definitions/font-family-headings",
+          "description": "Heading 3 font family"
+        },
+        "heading-3/weight": {
+          "figmaVariableId": "VariableID:845:1253581",
+          "figmaName": "heading 3 weight",
+          "resolvedType": "STRING",
+          "codeToken": "--heading-3-weight",
+          "tailwindKey": "fontWeight.h3",
+          "values": { "default": "Semibold" },
+          "aliasOf": null,
+          "description": "Heading 3 font weight"
+        },
+        "heading-3/font-size": {
+          "figmaVariableId": "VariableID:847:1253595",
+          "figmaName": "font-size",
+          "resolvedType": "FLOAT",
+          "codeToken": "--heading-3-font-size",
+          "tailwindKey": "fontSize.h3",
+          "values": { "default": 24 },
+          "unit": "px",
+          "aliasOf": null,
+          "description": "Heading 3 font size"
+        },
+        "heading-3/line-height": {
+          "figmaVariableId": "VariableID:847:1253601",
+          "figmaName": "line-height",
+          "resolvedType": "FLOAT",
+          "codeToken": "--heading-3-line-height",
+          "tailwindKey": "lineHeight.h3",
+          "values": { "default": 28.8 },
+          "unit": "px",
+          "aliasOf": null,
+          "description": "Heading 3 line height"
+        },
+        "heading-3/spacing": {
+          "figmaVariableId": "VariableID:869:10",
+          "figmaName": "spacing",
+          "resolvedType": "FLOAT",
+          "codeToken": "--heading-3-spacing",
+          "tailwindKey": null,
+          "values": { "default": 20 },
+          "unit": "px",
+          "aliasOf": null,
+          "description": "Heading 3 paragraph spacing"
+        },
+        "heading-3/letter-spacing": {
+          "figmaVariableId": "VariableID:869:14",
+          "figmaName": "letter-spacing",
+          "resolvedType": "FLOAT",
+          "codeToken": "--heading-3-letter-spacing",
+          "tailwindKey": "letterSpacing.h3",
+          "values": { "default": -1 },
+          "unit": "px",
+          "aliasOf": null,
+          "description": "Heading 3 letter spacing"
+        },
+        "heading-4/font-family": {
+          "figmaVariableId": "VariableID:1595:18182",
+          "figmaName": "font-family",
+          "resolvedType": "STRING",
+          "codeToken": "--heading-4-font-family",
+          "tailwindKey": "fontFamily.h4",
+          "values": { "default": "Geist" },
+          "aliasOf": "font definitions/font-family-headings",
+          "description": "Heading 4 font family"
+        },
+        "heading-4/weight": {
+          "figmaVariableId": "VariableID:845:1253582",
+          "figmaName": "weight",
+          "resolvedType": "STRING",
+          "codeToken": "--heading-4-weight",
+          "tailwindKey": "fontWeight.h4",
+          "values": { "default": "Semibold" },
+          "aliasOf": null,
+          "description": "Heading 4 font weight"
+        },
+        "heading-4/font-size": {
+          "figmaVariableId": "VariableID:847:1253596",
+          "figmaName": "font-size",
+          "resolvedType": "FLOAT",
+          "codeToken": "--heading-4-font-size",
+          "tailwindKey": "fontSize.h4",
+          "values": { "default": 20 },
+          "unit": "px",
+          "aliasOf": null,
+          "description": "Heading 4 font size"
+        },
+        "heading-4/line-height": {
+          "figmaVariableId": "VariableID:847:1253602",
+          "figmaName": "line-height",
+          "resolvedType": "FLOAT",
+          "codeToken": "--heading-4-line-height",
+          "tailwindKey": "lineHeight.h4",
+          "values": { "default": 24 },
+          "unit": "px",
+          "aliasOf": null,
+          "description": "Heading 4 line height"
+        },
+        "heading-4/spacing": {
+          "figmaVariableId": "VariableID:869:11",
+          "figmaName": "spacing",
+          "resolvedType": "FLOAT",
+          "codeToken": "--heading-4-spacing",
+          "tailwindKey": null,
+          "values": { "default": 20 },
+          "unit": "px",
+          "aliasOf": null,
+          "description": "Heading 4 paragraph spacing"
+        },
+        "heading-4/letter-spacing": {
+          "figmaVariableId": "VariableID:869:15",
+          "figmaName": "letter-spacing",
+          "resolvedType": "FLOAT",
+          "codeToken": "--heading-4-letter-spacing",
+          "tailwindKey": "letterSpacing.h4",
+          "values": { "default": 0 },
+          "unit": "px",
+          "aliasOf": null,
+          "description": "Heading 4 letter spacing"
+        },
+        "paragraph/large/font-size": {
+          "figmaVariableId": "VariableID:1688:597",
+          "figmaName": "font-size",
+          "resolvedType": "FLOAT",
+          "codeToken": "--paragraph-large-font-size",
+          "tailwindKey": "fontSize.lg",
+          "values": { "default": 18 },
+          "unit": "px",
+          "aliasOf": null,
+          "description": "Paragraph large font size"
+        },
+        "paragraph/large/line-height": {
+          "figmaVariableId": "VariableID:1688:598",
+          "figmaName": "line-height",
+          "resolvedType": "FLOAT",
+          "codeToken": "--paragraph-large-line-height",
+          "tailwindKey": "lineHeight.lg",
+          "values": { "default": 27 },
+          "unit": "px",
+          "aliasOf": null,
+          "description": "Paragraph large line height"
+        },
+        "paragraph/large/spacing": {
+          "figmaVariableId": "VariableID:1688:599",
+          "figmaName": "spacing",
+          "resolvedType": "FLOAT",
+          "codeToken": "--paragraph-large-spacing",
+          "tailwindKey": null,
+          "values": { "default": 18 },
+          "unit": "px",
+          "aliasOf": null,
+          "description": "Paragraph large paragraph spacing"
+        },
+        "paragraph/large/letter-spacing": {
+          "figmaVariableId": "VariableID:1688:600",
+          "figmaName": "letter-spacing",
+          "resolvedType": "FLOAT",
+          "codeToken": "--paragraph-large-letter-spacing",
+          "tailwindKey": "letterSpacing.lg",
+          "values": { "default": 0 },
+          "unit": "px",
+          "aliasOf": null,
+          "description": "Paragraph large letter spacing"
+        },
+        "paragraph/regular/font-size": {
+          "figmaVariableId": "VariableID:847:1253589",
+          "figmaName": "font-size",
+          "resolvedType": "FLOAT",
+          "codeToken": "--paragraph-regular-font-size",
+          "tailwindKey": "fontSize.base",
+          "values": { "default": 16 },
+          "unit": "px",
+          "aliasOf": null,
+          "description": "Paragraph regular font size"
+        },
+        "paragraph/regular/line-height": {
+          "figmaVariableId": "VariableID:847:1253603",
+          "figmaName": "line-height",
+          "resolvedType": "FLOAT",
+          "codeToken": "--paragraph-regular-line-height",
+          "tailwindKey": "lineHeight.base",
+          "values": { "default": 24 },
+          "unit": "px",
+          "aliasOf": null,
+          "description": "Paragraph regular line height"
+        },
+        "paragraph/regular/spacing": {
+          "figmaVariableId": "VariableID:847:1253606",
+          "figmaName": "spacing",
+          "resolvedType": "FLOAT",
+          "codeToken": "--paragraph-regular-spacing",
+          "tailwindKey": null,
+          "values": { "default": 16 },
+          "unit": "px",
+          "aliasOf": null,
+          "description": "Paragraph regular paragraph spacing"
+        },
+        "paragraph/regular/letter-spacing": {
+          "figmaVariableId": "VariableID:869:16",
+          "figmaName": "letter-spacing",
+          "resolvedType": "FLOAT",
+          "codeToken": "--paragraph-regular-letter-spacing",
+          "tailwindKey": "letterSpacing.base",
+          "values": { "default": 0 },
+          "unit": "px",
+          "aliasOf": null,
+          "description": "Paragraph regular letter spacing"
+        },
+        "paragraph/small/font-size": {
+          "figmaVariableId": "VariableID:847:1253590",
+          "figmaName": "font-size",
+          "resolvedType": "FLOAT",
+          "codeToken": "--paragraph-small-font-size",
+          "tailwindKey": "fontSize.sm",
+          "values": { "default": 14 },
+          "unit": "px",
+          "aliasOf": null,
+          "description": "Paragraph small font size"
+        },
+        "paragraph/small/line-height": {
+          "figmaVariableId": "VariableID:847:1253604",
+          "figmaName": "line height",
+          "resolvedType": "FLOAT",
+          "codeToken": "--paragraph-small-line-height",
+          "tailwindKey": "lineHeight.sm",
+          "values": { "default": 20 },
+          "unit": "px",
+          "aliasOf": null,
+          "description": "Paragraph small line height"
+        },
+        "paragraph/small/spacing": {
+          "figmaVariableId": "VariableID:847:1253607",
+          "figmaName": "spacing",
+          "resolvedType": "FLOAT",
+          "codeToken": "--paragraph-small-spacing",
+          "tailwindKey": null,
+          "values": { "default": 14 },
+          "unit": "px",
+          "aliasOf": null,
+          "description": "Paragraph small paragraph spacing"
+        },
+        "paragraph/small/letter-spacing": {
+          "figmaVariableId": "VariableID:869:18",
+          "figmaName": "letter-spacing",
+          "resolvedType": "FLOAT",
+          "codeToken": "--paragraph-small-letter-spacing",
+          "tailwindKey": "letterSpacing.sm",
+          "values": { "default": 0 },
+          "unit": "px",
+          "aliasOf": null,
+          "description": "Paragraph small letter spacing"
+        },
+        "paragraph/mini/font-size": {
+          "figmaVariableId": "VariableID:847:1253591",
+          "figmaName": "font-size",
+          "resolvedType": "FLOAT",
+          "codeToken": "--paragraph-mini-font-size",
+          "tailwindKey": "fontSize.xs",
+          "values": { "default": 12 },
+          "unit": "px",
+          "aliasOf": null,
+          "description": "Paragraph mini font size"
+        },
+        "paragraph/mini/line-height": {
+          "figmaVariableId": "VariableID:847:1253605",
+          "figmaName": "line height",
+          "resolvedType": "FLOAT",
+          "codeToken": "--paragraph-mini-line-height",
+          "tailwindKey": "lineHeight.xs",
+          "values": { "default": 16 },
+          "unit": "px",
+          "aliasOf": null,
+          "description": "Paragraph mini line height"
+        },
+        "paragraph/mini/spacing": {
+          "figmaVariableId": "VariableID:847:1253608",
+          "figmaName": "spacing",
+          "resolvedType": "FLOAT",
+          "codeToken": "--paragraph-mini-spacing",
+          "tailwindKey": null,
+          "values": { "default": 12 },
+          "unit": "px",
+          "aliasOf": null,
+          "description": "Paragraph mini paragraph spacing"
+        },
+        "paragraph/mini/letter-spacing": {
+          "figmaVariableId": "VariableID:869:19",
+          "figmaName": "letter-spacing",
+          "resolvedType": "FLOAT",
+          "codeToken": "--paragraph-mini-letter-spacing",
+          "tailwindKey": "letterSpacing.xs",
+          "values": { "default": 0 },
+          "unit": "px",
+          "aliasOf": null,
+          "description": "Paragraph mini letter spacing"
+        },
+        "paragraph/paragraph-weight": {
+          "figmaVariableId": "VariableID:845:1253583",
+          "figmaName": "paragraph-weight",
+          "resolvedType": "STRING",
+          "codeToken": "--paragraph-weight",
+          "tailwindKey": "fontWeight.normal",
+          "values": { "default": "Regular" },
+          "aliasOf": null,
+          "description": "Paragraph regular weight"
+        },
+        "paragraph/paragraph-bold-weight": {
+          "figmaVariableId": "VariableID:845:1253584",
+          "figmaName": "paragraph-bold-weight",
+          "resolvedType": "STRING",
+          "codeToken": "--paragraph-bold-weight",
+          "tailwindKey": "fontWeight.semibold",
+          "values": { "default": "Semibold" },
+          "aliasOf": null,
+          "description": "Paragraph bold weight"
+        },
+        "paragraph/paragraph-medium-weight": {
+          "figmaVariableId": "VariableID:869:6093",
+          "figmaName": "paragraph-medium-weight",
+          "resolvedType": "STRING",
+          "codeToken": "--paragraph-medium-weight",
+          "tailwindKey": "fontWeight.medium",
+          "values": { "default": "Medium" },
+          "aliasOf": null,
+          "description": "Paragraph medium weight"
+        },
+        "monospaced/font-size": {
+          "figmaVariableId": "VariableID:869:6089",
+          "figmaName": "font-size",
+          "resolvedType": "FLOAT",
+          "codeToken": "--monospaced-font-size",
+          "tailwindKey": "fontSize.mono",
+          "values": { "default": 16 },
+          "unit": "px",
+          "aliasOf": null,
+          "description": "Monospaced font size"
+        },
+        "monospaced/line-height": {
+          "figmaVariableId": "VariableID:869:6090",
+          "figmaName": "line-height",
+          "resolvedType": "FLOAT",
+          "codeToken": "--monospaced-line-height",
+          "tailwindKey": "lineHeight.mono",
+          "values": { "default": 24 },
+          "unit": "px",
+          "aliasOf": null,
+          "description": "Monospaced line height"
+        },
+        "monospaced/spacing": {
+          "figmaVariableId": "VariableID:869:6092",
+          "figmaName": "spacing",
+          "resolvedType": "FLOAT",
+          "codeToken": "--monospaced-spacing",
+          "tailwindKey": null,
+          "values": { "default": 16 },
+          "unit": "px",
+          "aliasOf": null,
+          "description": "Monospaced paragraph spacing"
+        },
+        "monospaced/letter-spacing": {
+          "figmaVariableId": "VariableID:869:6091",
+          "figmaName": "letter-spacing",
+          "resolvedType": "FLOAT",
+          "codeToken": "--monospaced-letter-spacing",
+          "tailwindKey": "letterSpacing.mono",
+          "values": { "default": 0 },
+          "unit": "px",
+          "aliasOf": null,
+          "description": "Monospaced letter spacing"
+        },
+        "monospaced/font-weight": {
+          "figmaVariableId": "VariableID:869:27676",
+          "figmaName": "font-weight",
+          "resolvedType": "STRING",
+          "codeToken": "--monospaced-font-weight",
+          "tailwindKey": "fontWeight.mono",
+          "values": { "default": "Regular" },
+          "aliasOf": null,
+          "description": "Monospaced font weight"
+        },
+        "caption/font-size": {
+          "figmaVariableId": "VariableID:1723:5705",
+          "figmaName": "font-size",
+          "resolvedType": "FLOAT",
+          "codeToken": "--caption-font-size",
+          "tailwindKey": "fontSize.caption",
+          "values": { "default": 14 },
+          "unit": "px",
+          "aliasOf": null,
+          "description": "Caption font size"
+        },
+        "caption/line-height": {
+          "figmaVariableId": "VariableID:1723:5706",
+          "figmaName": "line-height",
+          "resolvedType": "FLOAT",
+          "codeToken": "--caption-line-height",
+          "tailwindKey": "lineHeight.caption",
+          "values": { "default": 21 },
+          "unit": "px",
+          "aliasOf": null,
+          "description": "Caption line height"
+        },
+        "caption/spacing": {
+          "figmaVariableId": "VariableID:1723:5707",
+          "figmaName": "spacing",
+          "resolvedType": "FLOAT",
+          "codeToken": "--caption-spacing",
+          "tailwindKey": null,
+          "values": { "default": 14 },
+          "unit": "px",
+          "aliasOf": null,
+          "description": "Caption paragraph spacing"
+        },
+        "caption/letter-spacing": {
+          "figmaVariableId": "VariableID:1723:5708",
+          "figmaName": "letter-spacing",
+          "resolvedType": "FLOAT",
+          "codeToken": "--caption-letter-spacing",
+          "tailwindKey": "letterSpacing.caption",
+          "values": { "default": 1.5 },
+          "unit": "px",
+          "aliasOf": null,
+          "description": "Caption letter spacing"
+        },
+        "caption/font-weight": {
+          "figmaVariableId": "VariableID:1723:5709",
+          "figmaName": "font-weight",
+          "resolvedType": "STRING",
+          "codeToken": "--caption-font-weight",
+          "tailwindKey": "fontWeight.caption",
+          "values": { "default": "Regular" },
+          "aliasOf": null,
+          "description": "Caption font weight"
+        }
+      }
     }
   },
 
@@ -598,6 +1228,14 @@
   },
 
   "syncLog": [
+    {
+      "timestamp": "2026-03-12T16:45:00Z",
+      "direction": "figma-to-code",
+      "action": "add-collection",
+      "tokensChanged": ["typography"],
+      "componentsChanged": [],
+      "notes": "Added full typography collection (58 variables) from Figma. Includes: font definitions (5), heading 1–4 (6 each = 24), paragraph large/regular/small/mini (4 each = 16), paragraph weights (3), monospaced (5), caption (5)."
+    },
     {
       "timestamp": "2026-03-12T00:00:00Z",
       "direction": "figma-to-code",
