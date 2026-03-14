@@ -1232,6 +1232,9 @@
           }
         }
       },
+      "typography": {
+        "label": "font-sans"
+      },
       "lastSynced": null,
       "status": "figma-only"
     },
@@ -1243,8 +1246,35 @@
       "shadcnComponent": "Card",
       "storyPath": "src/components/ui/card.stories.tsx",
       "variants": {},
+      "typography": {
+        "title": "font-sans",
+        "description": "font-serif",
+        "content": "font-serif"
+      },
       "lastSynced": null,
       "status": "figma-only"
+    }
+  },
+
+  "typographyAssignments": {
+    "_comment": "Maps Tailwind font-family utility classes to design-map tokens. Use these classes when generating component markup.",
+    "font-sans": {
+      "token": "font-definitions/font-family-sans",
+      "cssVar": "--font-family-sans",
+      "resolvedFont": "Poppins",
+      "usage": "Headings, button labels, UI controls"
+    },
+    "font-serif": {
+      "token": "font-definitions/font-family-serif",
+      "cssVar": "--font-family-serif",
+      "resolvedFont": "Sometype Mono",
+      "usage": "Card descriptions, body text, supporting copy"
+    },
+    "font-mono": {
+      "token": "font-definitions/font-family-monospace",
+      "cssVar": "--font-family-monospace",
+      "resolvedFont": "Geist Mono",
+      "usage": "Code blocks, technical labels"
     }
   },
 
