@@ -1257,20 +1257,104 @@
   },
 
   "fontConfig": {
-    "_syncInstructions": "When a font-family token value changes during a sync, update the Google Fonts CDN href in layout.tsx to load the new font, update the --font-serif or --font-sans fallback value in globals.css, update the resolvedFont in typographyAssignments, and update the CDN href in .storybook/preview-head.html to match layout.tsx.",
-    "Poppins": {
-      "googleFamilyName": "Poppins",
-      "weightsLoaded": [400, 500, 600, 700],
-      "cssVariable": "--font-sans",
-      "loadedIn": "src/app/layout.tsx",
-      "loadingMethod": "cdn"
+    "sans": {
+      "currentValue": "Poppins",
+      "fallbackStack": "ui-sans-serif, system-ui, sans-serif",
+      "cdnProvider": "google-fonts",
+      "cdnWeights": [400, 500, 600, 700],
+      "syncTargets": [
+        {
+          "file": "src/app/layout.tsx",
+          "action": "replace-cdn-link",
+          "description": "Replace the Poppins family param in the Google Fonts href"
+        },
+        {
+          "file": ".storybook/preview-head.html",
+          "action": "replace-cdn-link",
+          "description": "Replace the Poppins family param in the Google Fonts href"
+        },
+        {
+          "file": "src/app/globals.css",
+          "action": "replace-css-variable",
+          "description": "Update --font-sans to the new font name and fallback stack"
+        },
+        {
+          "file": "src/styles/typography.css",
+          "action": "replace-css-variable",
+          "description": "Update --font-family-sans to the new font name and fallback stack"
+        },
+        {
+          "file": "design-map.json",
+          "action": "update-typography-assignments",
+          "description": "Update typographyAssignments.font-sans.resolvedFont to the new font name"
+        }
+      ]
     },
-    "Sometype Mono": {
-      "googleFamilyName": "Sometype+Mono",
-      "weightsLoaded": [400, 500, 700],
-      "cssVariable": ["--font-serif", "--font-mono"],
-      "loadedIn": "src/app/layout.tsx",
-      "loadingMethod": "cdn"
+    "serif": {
+      "currentValue": "Merriweather",
+      "fallbackStack": "ui-serif, Georgia, serif",
+      "cdnProvider": "google-fonts",
+      "cdnWeights": [400, 700],
+      "syncTargets": [
+        {
+          "file": "src/app/layout.tsx",
+          "action": "replace-cdn-link",
+          "description": "Replace the Merriweather family param in the Google Fonts href"
+        },
+        {
+          "file": ".storybook/preview-head.html",
+          "action": "replace-cdn-link",
+          "description": "Replace the Merriweather family param in the Google Fonts href"
+        },
+        {
+          "file": "src/app/globals.css",
+          "action": "replace-css-variable",
+          "description": "Update --font-serif to the new font name and fallback stack"
+        },
+        {
+          "file": "src/styles/typography.css",
+          "action": "replace-css-variable",
+          "description": "Update --font-family-serif to the new font name and fallback stack"
+        },
+        {
+          "file": "design-map.json",
+          "action": "update-typography-assignments",
+          "description": "Update typographyAssignments.font-serif.resolvedFont to the new font name"
+        }
+      ]
+    },
+    "mono": {
+      "currentValue": "Sometype Mono",
+      "fallbackStack": "ui-monospace, monospace",
+      "cdnProvider": "google-fonts",
+      "cdnWeights": [400, 500, 700],
+      "syncTargets": [
+        {
+          "file": "src/app/layout.tsx",
+          "action": "replace-cdn-link",
+          "description": "Replace the Sometype Mono family param in the Google Fonts href"
+        },
+        {
+          "file": ".storybook/preview-head.html",
+          "action": "replace-cdn-link",
+          "description": "Replace the Sometype Mono family param in the Google Fonts href"
+        },
+        {
+          "file": "src/app/globals.css",
+          "action": "replace-css-variable",
+          "description": "Update --font-mono to the new font name and fallback stack"
+        },
+        {
+          "file": "src/styles/typography.css",
+          "action": "replace-css-variable",
+          "description": "Update --font-family-monospace to the new font name and fallback stack"
+        },
+        {
+          "file": "design-map.json",
+          "action": "update-typography-assignments",
+          "description": "Update typographyAssignments.font-mono.resolvedFont to the new font name"
+        }
+      ]
     }
   },
 
