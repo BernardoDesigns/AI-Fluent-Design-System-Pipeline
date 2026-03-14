@@ -1,7 +1,7 @@
 {
   "$schema": "design-map-v1",
   "version": "1.0.0",
-  "lastSynced": "2026-03-14T15:22:00Z",
+  "lastSynced": "2026-03-14T15:39:00Z",
   "lastSyncDirection": "figma-to-code",
 
   "meta": {
@@ -590,8 +590,8 @@
           "resolvedType": "STRING",
           "codeToken": "--font-family-serif",
           "tailwindKey": "fontFamily.serif",
-          "values": { "default": "Playfair Display" },
-          "codeFallbacks": "ui-serif, serif",
+          "values": { "default": "Sometype Mono" },
+          "codeFallbacks": "ui-monospace, monospace",
           "aliasOf": null,
           "description": "Serif font family"
         },
@@ -622,7 +622,7 @@
           "resolvedType": "STRING",
           "codeToken": "--font-family-body",
           "tailwindKey": "fontFamily.body",
-          "values": { "default": "Playfair Display" },
+          "values": { "default": "Sometype Mono" },
           "aliasOf": "font definitions/font-family-serif",
           "description": "Body font family"
         },
@@ -1265,17 +1265,10 @@
       "loadedIn": "src/app/layout.tsx",
       "loadingMethod": "cdn"
     },
-    "Playfair Display": {
-      "googleFamilyName": "Playfair+Display",
-      "weightsLoaded": [400, 500, 600, 700],
-      "cssVariable": "--font-serif",
-      "loadedIn": "src/app/layout.tsx",
-      "loadingMethod": "cdn"
-    },
     "Sometype Mono": {
       "googleFamilyName": "Sometype+Mono",
       "weightsLoaded": [400, 500, 700],
-      "cssVariable": "--font-mono",
+      "cssVariable": ["--font-serif", "--font-mono"],
       "loadedIn": "src/app/layout.tsx",
       "loadingMethod": "cdn"
     }
@@ -1292,7 +1285,7 @@
     "font-serif": {
       "token": "font-definitions/font-family-serif",
       "cssVar": "--font-family-serif",
-      "resolvedFont": "Playfair Display",
+      "resolvedFont": "Sometype Mono",
       "usage": "Card descriptions, body text, supporting copy"
     },
     "font-mono": {
@@ -1304,6 +1297,14 @@
   },
 
   "syncLog": [
+    {
+      "timestamp": "2026-03-14T15:39:00Z",
+      "direction": "figma-to-code",
+      "action": "drift-sync",
+      "tokensChanged": ["font-definitions/font-family-serif", "font-definitions/font-family-body"],
+      "componentsChanged": [],
+      "notes": "font-family-serif changed from Playfair Display to Sometype Mono. font-family-body alias (font-family-serif) now resolves to Sometype Mono. Playfair Display removed from CDN in layout.tsx and preview-head.html (Sometype Mono already loaded for --font-mono). globals.css --font-serif fallback updated. fontConfig consolidated: Sometype Mono now serves both --font-serif and --font-mono."
+    },
     {
       "timestamp": "2026-03-14T15:22:00Z",
       "direction": "figma-to-code",
