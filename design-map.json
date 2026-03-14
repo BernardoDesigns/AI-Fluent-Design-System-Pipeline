@@ -1,7 +1,7 @@
 {
   "$schema": "design-map-v1",
   "version": "1.0.0",
-  "lastSynced": "2026-03-14T22:42:00Z",
+  "lastSynced": "2026-03-14T23:03:00Z",
   "lastSyncDirection": "figma-to-code",
 
   "meta": {
@@ -590,8 +590,8 @@
           "resolvedType": "STRING",
           "codeToken": "--font-family-serif",
           "tailwindKey": "fontFamily.serif",
-          "values": { "default": "Sometype Mono" },
-          "codeFallbacks": "ui-monospace, monospace",
+          "values": { "default": "Lora" },
+          "codeFallbacks": "ui-serif, Georgia, serif",
           "aliasOf": null,
           "description": "Serif font family"
         },
@@ -1291,20 +1291,20 @@
       ]
     },
     "serif": {
-      "currentValue": "Sometype Mono",
-      "fallbackStack": "ui-monospace, monospace",
+      "currentValue": "Lora",
+      "fallbackStack": "ui-serif, Georgia, serif",
       "cdnProvider": "google-fonts",
-      "cdnWeights": [400, 500, 700],
+      "cdnWeights": [400, 700],
       "syncTargets": [
         {
           "file": "src/app/layout.tsx",
           "action": "replace-cdn-link",
-          "description": "Replace the Sometype Mono family param in the Google Fonts href"
+          "description": "Replace the Lora family param in the Google Fonts href"
         },
         {
           "file": ".storybook/preview-head.html",
           "action": "replace-cdn-link",
-          "description": "Replace the Sometype Mono family param in the Google Fonts href"
+          "description": "Replace the Lora family param in the Google Fonts href"
         },
         {
           "file": "src/app/globals.css",
@@ -1369,7 +1369,7 @@
     "font-serif": {
       "token": "font-definitions/font-family-serif",
       "cssVar": "--font-family-serif",
-      "resolvedFont": "Sometype Mono",
+      "resolvedFont": "Lora",
       "usage": "Card descriptions, body text, supporting copy"
     },
     "font-mono": {
@@ -1381,6 +1381,14 @@
   },
 
   "syncLog": [
+    {
+      "timestamp": "2026-03-14T23:03:00Z",
+      "direction": "figma-to-code",
+      "action": "drift-sync",
+      "tokensChanged": ["font-definitions/font-family-serif", "font-definitions/font-family-body"],
+      "componentsChanged": [],
+      "notes": "font-family-serif changed from Sometype Mono to Lora. font-family-body alias now resolves to Lora. Added Lora:wght@400;700 to CDN in layout.tsx and preview-head.html (Sometype Mono kept for --font-mono). globals.css --font-serif updated to Lora with serif fallback stack. typography.css --font-family-serif updated. fontConfig.serif.currentValue, fallbackStack, cdnWeights, syncTarget descriptions, and collections token value updated. All semantic colors, spacing, and border radii confirmed in sync."
+    },
     {
       "timestamp": "2026-03-14T22:42:00Z",
       "direction": "figma-to-code",
