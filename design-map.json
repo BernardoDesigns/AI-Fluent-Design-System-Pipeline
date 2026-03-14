@@ -1257,7 +1257,7 @@
   },
 
   "fontConfig": {
-    "_syncInstructions": "When a font-family token value changes during a sync, update the Google Fonts CDN href in layout.tsx to load the new font, update the --font-serif or --font-sans fallback value in globals.css, and update the resolvedFont in typographyAssignments.",
+    "_syncInstructions": "When a font-family token value changes during a sync, update the Google Fonts CDN href in layout.tsx to load the new font, update the --font-serif or --font-sans fallback value in globals.css, update the resolvedFont in typographyAssignments, and update the CDN href in .storybook/preview-head.html to match layout.tsx.",
     "Poppins": {
       "googleFamilyName": "Poppins",
       "weightsLoaded": [400, 500, 600, 700],
