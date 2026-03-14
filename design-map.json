@@ -1256,6 +1256,31 @@
     }
   },
 
+  "fontConfig": {
+    "_syncInstructions": "When a font-family token value changes during a sync, update the Google Fonts CDN href in layout.tsx to load the new font, update the --font-serif or --font-sans fallback value in globals.css, and update the resolvedFont in typographyAssignments.",
+    "Poppins": {
+      "googleFamilyName": "Poppins",
+      "weightsLoaded": [400, 500, 600, 700],
+      "cssVariable": "--font-sans",
+      "loadedIn": "src/app/layout.tsx",
+      "loadingMethod": "cdn"
+    },
+    "Sometype Mono": {
+      "googleFamilyName": "Sometype+Mono",
+      "weightsLoaded": [400, 500, 700],
+      "cssVariable": "--font-serif",
+      "loadedIn": "src/app/layout.tsx",
+      "loadingMethod": "cdn"
+    },
+    "Geist Mono": {
+      "googleFamilyName": "Geist+Mono",
+      "weightsLoaded": [400, 500, 700],
+      "cssVariable": "--font-mono",
+      "loadedIn": "src/app/layout.tsx",
+      "loadingMethod": "next-font"
+    }
+  },
+
   "typographyAssignments": {
     "_comment": "Maps Tailwind font-family utility classes to design-map tokens. Use these classes when generating component markup.",
     "font-sans": {
