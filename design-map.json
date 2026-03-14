@@ -1,7 +1,7 @@
 {
   "$schema": "design-map-v1",
   "version": "1.0.0",
-  "lastSynced": "2026-03-14T22:24:00Z",
+  "lastSynced": "2026-03-14T22:42:00Z",
   "lastSyncDirection": "figma-to-code",
 
   "meta": {
@@ -1291,20 +1291,20 @@
       ]
     },
     "serif": {
-      "currentValue": "Merriweather",
-      "fallbackStack": "ui-serif, Georgia, serif",
+      "currentValue": "Sometype Mono",
+      "fallbackStack": "ui-monospace, monospace",
       "cdnProvider": "google-fonts",
-      "cdnWeights": [400, 700],
+      "cdnWeights": [400, 500, 700],
       "syncTargets": [
         {
           "file": "src/app/layout.tsx",
           "action": "replace-cdn-link",
-          "description": "Replace the Merriweather family param in the Google Fonts href"
+          "description": "Replace the Sometype Mono family param in the Google Fonts href"
         },
         {
           "file": ".storybook/preview-head.html",
           "action": "replace-cdn-link",
-          "description": "Replace the Merriweather family param in the Google Fonts href"
+          "description": "Replace the Sometype Mono family param in the Google Fonts href"
         },
         {
           "file": "src/app/globals.css",
@@ -1369,7 +1369,7 @@
     "font-serif": {
       "token": "font-definitions/font-family-serif",
       "cssVar": "--font-family-serif",
-      "resolvedFont": "Merriweather",
+      "resolvedFont": "Sometype Mono",
       "usage": "Card descriptions, body text, supporting copy"
     },
     "font-mono": {
@@ -1381,6 +1381,14 @@
   },
 
   "syncLog": [
+    {
+      "timestamp": "2026-03-14T22:42:00Z",
+      "direction": "figma-to-code",
+      "action": "drift-sync",
+      "tokensChanged": ["font-definitions/font-family-serif"],
+      "componentsChanged": [],
+      "notes": "font-family-serif reverted to Sometype Mono (Figma source of truth). Merriweather removed from CDN in layout.tsx and preview-head.html. globals.css --font-serif restored to Sometype Mono with monospace fallback stack. fontConfig.serif.currentValue, fallbackStack, cdnWeights, and syncTarget descriptions updated. typography.css was already correct. All semantic colors, spacing, and border radii confirmed in sync."
+    },
     {
       "timestamp": "2026-03-14T22:24:00Z",
       "direction": "figma-to-code",
