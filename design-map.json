@@ -1285,7 +1285,7 @@
     "font-serif": {
       "token": "font-definitions/font-family-serif",
       "cssVar": "--font-family-serif",
-      "resolvedFont": "Sometype Mono",
+      "resolvedFont": "Merriweather",
       "usage": "Card descriptions, body text, supporting copy"
     },
     "font-mono": {
