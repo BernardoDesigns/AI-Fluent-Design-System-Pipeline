@@ -1,7 +1,7 @@
 {
   "$schema": "design-map-v1",
   "version": "1.0.0",
-  "lastSynced": "2026-03-14T15:55:00Z",
+  "lastSynced": "2026-03-14T16:10:00Z",
   "lastSyncDirection": "figma-to-code",
 
   "meta": {
@@ -590,8 +590,8 @@
           "resolvedType": "STRING",
           "codeToken": "--font-family-serif",
           "tailwindKey": "fontFamily.serif",
-          "values": { "default": "Island Moments" },
-          "codeFallbacks": "ui-serif, serif",
+          "values": { "default": "Sometype Mono" },
+          "codeFallbacks": "ui-monospace, monospace",
           "aliasOf": null,
           "description": "Serif font family"
         },
@@ -622,7 +622,7 @@
           "resolvedType": "STRING",
           "codeToken": "--font-family-body",
           "tailwindKey": "fontFamily.body",
-          "values": { "default": "Island Moments" },
+          "values": { "default": "Sometype Mono" },
           "aliasOf": "font definitions/font-family-serif",
           "description": "Body font family"
         },
@@ -1265,17 +1265,10 @@
       "loadedIn": "src/app/layout.tsx",
       "loadingMethod": "cdn"
     },
-    "Island Moments": {
-      "googleFamilyName": "Island+Moments",
-      "weightsLoaded": [400],
-      "cssVariable": "--font-serif",
-      "loadedIn": "src/app/layout.tsx",
-      "loadingMethod": "cdn"
-    },
     "Sometype Mono": {
       "googleFamilyName": "Sometype+Mono",
       "weightsLoaded": [400, 500, 700],
-      "cssVariable": "--font-mono",
+      "cssVariable": ["--font-serif", "--font-mono"],
       "loadedIn": "src/app/layout.tsx",
       "loadingMethod": "cdn"
     }
@@ -1292,7 +1285,7 @@
     "font-serif": {
       "token": "font-definitions/font-family-serif",
       "cssVar": "--font-family-serif",
-      "resolvedFont": "Island Moments",
+      "resolvedFont": "Sometype Mono",
       "usage": "Card descriptions, body text, supporting copy"
     },
     "font-mono": {
@@ -1304,6 +1297,14 @@
   },
 
   "syncLog": [
+    {
+      "timestamp": "2026-03-14T16:10:00Z",
+      "direction": "figma-to-code",
+      "action": "drift-sync",
+      "tokensChanged": ["font-definitions/font-family-serif", "font-definitions/font-family-body"],
+      "componentsChanged": [],
+      "notes": "font-family-serif reverted to Sometype Mono (Figma source of truth). Island Moments removed from CDN in layout.tsx and preview-head.html. globals.css --font-serif restored to Sometype Mono. Sometype Mono now serves both --font-serif and --font-mono. 51 other tokens unchanged."
+    },
     {
       "timestamp": "2026-03-14T15:55:00Z",
       "direction": "figma-to-code",
