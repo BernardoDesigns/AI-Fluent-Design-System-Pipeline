@@ -3,18 +3,18 @@ import { Poppins, Source_Serif_4, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 const poppins = Poppins({
-  variable: "--font-sans",
+  variable: "--font-poppins",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
 
 const sourceSerif4 = Source_Serif_4({
-  variable: "--font-serif",
+  variable: "--font-source-serif",
   subsets: ["latin"],
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-mono",
+  variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 
