@@ -51,7 +51,7 @@ export default function Home() {
             <h1 className="text-2xl font-bold tracking-tight">
               Bernardo Designs System
             </h1>
-            <p className="mt-1 text-sm text-muted-foreground">
+            <p className="mt-1 text-sm text-muted-foreground font-serif">
               Component Showcase — powered by the design-to-production pipeline
             </p>
           </div>
@@ -152,7 +152,7 @@ export default function Home() {
             <div className="grid gap-1.5">
               <label htmlFor="showcase-textarea" className="text-sm font-medium">Message</label>
               <Textarea id="showcase-textarea" placeholder="Type your message here..." />
-              <p className="text-xs text-muted-foreground">Max 500 characters.</p>
+              <p className="text-xs text-muted-foreground font-serif">Max 500 characters.</p>
             </div>
             <Textarea disabled placeholder="Disabled textarea" />
           </div>
@@ -219,13 +219,13 @@ export default function Home() {
                 <TabsTrigger value="billing">Billing</TabsTrigger>
               </TabsList>
               <TabsContent value="account">
-                <p className="text-sm text-muted-foreground pt-2">Manage your account settings.</p>
+                <p className="text-sm text-muted-foreground pt-2 font-serif">Manage your account settings.</p>
               </TabsContent>
               <TabsContent value="password">
-                <p className="text-sm text-muted-foreground pt-2">Change your password here.</p>
+                <p className="text-sm text-muted-foreground pt-2 font-serif">Change your password here.</p>
               </TabsContent>
               <TabsContent value="billing">
-                <p className="text-sm text-muted-foreground pt-2">Manage billing and subscriptions.</p>
+                <p className="text-sm text-muted-foreground pt-2 font-serif">Manage billing and subscriptions.</p>
               </TabsContent>
             </Tabs>
             <Tabs defaultValue="overview">
@@ -234,10 +234,10 @@ export default function Home() {
                 <TabsTrigger value="analytics">Analytics</TabsTrigger>
               </TabsList>
               <TabsContent value="overview">
-                <p className="text-sm text-muted-foreground pt-2">Line variant tabs.</p>
+                <p className="text-sm text-muted-foreground pt-2 font-serif">Line variant tabs.</p>
               </TabsContent>
               <TabsContent value="analytics">
-                <p className="text-sm text-muted-foreground pt-2">Analytics view.</p>
+                <p className="text-sm text-muted-foreground pt-2 font-serif">Analytics view.</p>
               </TabsContent>
             </Tabs>
           </div>
@@ -328,7 +328,7 @@ export default function Home() {
             <div>
               <p className="text-sm font-medium">Horizontal</p>
               <Separator className="my-3" />
-              <p className="text-sm text-muted-foreground">Content below the separator.</p>
+              <p className="text-sm text-muted-foreground font-serif">Content below the separator.</p>
             </div>
             <div className="flex h-5 items-center gap-4 text-sm">
               <span>Blog</span>
@@ -344,7 +344,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="border-t">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-6">
-          <p className="text-xs text-muted-foreground">
+          <p className="text-xs text-muted-foreground font-serif">
             12 components &middot; 4 token collections &middot; Figma &rarr; Code
           </p>
           <div className="flex items-center gap-2">

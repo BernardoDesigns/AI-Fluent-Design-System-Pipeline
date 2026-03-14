@@ -50,7 +50,7 @@ export const WithLabel: Story = {
         Your message
       </label>
       <Textarea id="message" placeholder="Type your message here..." />
-      <p className="text-xs text-muted-foreground">
+      <p className="text-xs text-muted-foreground font-serif">
         Your message will be sent to our support team.
       </p>
     </div>

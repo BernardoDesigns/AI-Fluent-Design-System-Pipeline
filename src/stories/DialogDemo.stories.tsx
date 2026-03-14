@@ -35,7 +35,7 @@ export const Basic: Story = {
       <DialogContent>
         <DialogHeader>
           <DialogTitle>Basic Dialog</DialogTitle>
-          <DialogDescription>
+          <DialogDescription className="font-serif">
             This is a basic dialog with a title and description.
           </DialogDescription>
         </DialogHeader>
@@ -56,7 +56,7 @@ export const WithForm: Story = {
       <DialogContent>
         <DialogHeader>
           <DialogTitle>Edit Profile</DialogTitle>
-          <DialogDescription>
+          <DialogDescription className="font-serif">
             Make changes to your profile here. Click save when you&apos;re done.
           </DialogDescription>
         </DialogHeader>
@@ -89,7 +89,7 @@ export const Destructive: Story = {
       <DialogContent>
         <DialogHeader>
           <DialogTitle>Are you sure?</DialogTitle>
-          <DialogDescription>
+          <DialogDescription className="font-serif">
             This action cannot be undone. This will permanently delete your
             account and remove your data from our servers.
           </DialogDescription>

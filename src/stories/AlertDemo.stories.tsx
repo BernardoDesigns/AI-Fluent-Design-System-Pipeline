@@ -40,7 +40,7 @@ export const Default: Story = {
   render: (args) => (
     <Alert {...args} variant="default">
       <AlertTitle>Heads up</AlertTitle>
-      <AlertDescription>
+      <AlertDescription className="font-serif">
         You can add components to your app using the CLI.
       </AlertDescription>
     </Alert>
@@ -51,7 +51,7 @@ export const Destructive: Story = {
   render: (args) => (
     <Alert {...args} variant="destructive">
       <AlertTitle>Something went wrong</AlertTitle>
-      <AlertDescription>
+      <AlertDescription className="font-serif">
         Your session has expired. Please log in again to continue.
       </AlertDescription>
     </Alert>
@@ -66,7 +66,7 @@ export const WithInfoIcon: Story = {
     <Alert {...args} variant="default">
       <Info />
       <AlertTitle>New feature available</AlertTitle>
-      <AlertDescription>
+      <AlertDescription className="font-serif">
         Check out the new dashboard experience in settings.
       </AlertDescription>
     </Alert>
@@ -79,7 +79,7 @@ export const WithTerminalIcon: Story = {
     <Alert {...args} variant="default">
       <Terminal />
       <AlertTitle>Run the following command</AlertTitle>
-      <AlertDescription>
+      <AlertDescription className="font-serif">
         <code className="font-mono text-xs">npx shadcn@latest add button</code>
       </AlertDescription>
     </Alert>
@@ -92,7 +92,7 @@ export const WithDestructiveIcon: Story = {
     <Alert {...args} variant="destructive">
       <AlertCircle />
       <AlertTitle>Error</AlertTitle>
-      <AlertDescription>
+      <AlertDescription className="font-serif">
         Your payment method could not be verified. Please update your billing
         details.
       </AlertDescription>
@@ -108,7 +108,7 @@ export const WithAction: Story = {
     <Alert {...args} variant="default">
       <Info />
       <AlertTitle>Update available</AlertTitle>
-      <AlertDescription>
+      <AlertDescription className="font-serif">
         A new version of the app is ready to install.
       </AlertDescription>
       <AlertAction>
@@ -124,7 +124,7 @@ export const WithDestructiveAction: Story = {
     <Alert {...args} variant="destructive">
       <TriangleAlert />
       <AlertTitle>Delete account</AlertTitle>
-      <AlertDescription>
+      <AlertDescription className="font-serif">
         This action is permanent and cannot be undone.
       </AlertDescription>
       <AlertAction>
@@ -143,12 +143,12 @@ export const AllVariants: Story = {
       <Alert variant="default">
         <Info />
         <AlertTitle>Default</AlertTitle>
-        <AlertDescription>Informational message for the user.</AlertDescription>
+        <AlertDescription className="font-serif">Informational message for the user.</AlertDescription>
       </Alert>
       <Alert variant="destructive">
         <AlertCircle />
         <AlertTitle>Destructive</AlertTitle>
-        <AlertDescription>Something went wrong or needs attention.</AlertDescription>
+        <AlertDescription className="font-serif">Something went wrong or needs attention.</AlertDescription>
       </Alert>
     </div>
   ),

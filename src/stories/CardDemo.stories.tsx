@@ -37,10 +37,10 @@ export const Default: Story = {
     <Card {...args} className="w-80">
       <CardHeader>
         <CardTitle>Card Title</CardTitle>
-        <CardDescription>A short description of the card content.</CardDescription>
+        <CardDescription className="font-serif">A short description of the card content.</CardDescription>
       </CardHeader>
       <CardContent>
-        <p className="text-muted-foreground">
+        <p className="font-serif text-muted-foreground">
           This is the main body of the card. It can contain any content.
         </p>
       </CardContent>
@@ -57,10 +57,10 @@ export const Small: Story = {
     <Card {...args} size="sm" className="w-72">
       <CardHeader>
         <CardTitle>Small Card</CardTitle>
-        <CardDescription>Compact layout with reduced padding.</CardDescription>
+        <CardDescription className="font-serif">Compact layout with reduced padding.</CardDescription>
       </CardHeader>
       <CardContent>
-        <p className="text-muted-foreground">Tighter spacing for denser UIs.</p>
+        <p className="font-serif text-muted-foreground">Tighter spacing for denser UIs.</p>
       </CardContent>
       <CardFooter>
         <Button size="sm">Action</Button>
@@ -77,13 +77,13 @@ export const WithAction: Story = {
     <Card {...args} className="w-80">
       <CardHeader>
         <CardTitle>Notifications</CardTitle>
-        <CardDescription>You have 3 unread messages.</CardDescription>
+        <CardDescription className="font-serif">You have 3 unread messages.</CardDescription>
         <CardAction>
           <Button size="sm" variant="ghost">Mark all read</Button>
         </CardAction>
       </CardHeader>
       <CardContent>
-        <p className="text-muted-foreground">
+        <p className="font-serif text-muted-foreground">
           Inbox updates will appear here.
         </p>
       </CardContent>
@@ -96,7 +96,7 @@ export const ContentOnly: Story = {
   render: (args) => (
     <Card {...args} className="w-72">
       <CardContent>
-        <p className="text-muted-foreground">
+        <p className="font-serif text-muted-foreground">
           A minimal card with no header or footer.
         </p>
       </CardContent>
@@ -112,10 +112,10 @@ export const AllSizes: Story = {
         <Card key={size} size={size} className="w-80">
           <CardHeader>
             <CardTitle>{size === "default" ? "Default" : "Small"} Card</CardTitle>
-            <CardDescription>size="{size}"</CardDescription>
+            <CardDescription className="font-serif">size="{size}"</CardDescription>
           </CardHeader>
           <CardContent>
-            <p className="text-muted-foreground">Card body content.</p>
+            <p className="font-serif text-muted-foreground">Card body content.</p>
           </CardContent>
           <CardFooter>
             <Button size="sm" variant="outline">Action</Button>
