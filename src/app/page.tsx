@@ -100,10 +100,10 @@ export default function Home() {
           <Card>
             <CardHeader>
               <CardTitle>Project Overview</CardTitle>
-              <CardDescription>Design tokens synced from Figma</CardDescription>
+              <CardDescription className="font-serif">Design tokens synced from Figma</CardDescription>
             </CardHeader>
             <CardContent>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-muted-foreground font-serif">
                 12 components installed, 4 token collections mapped, Poppins loaded.
               </p>
             </CardContent>
