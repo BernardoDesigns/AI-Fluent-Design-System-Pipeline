@@ -3,7 +3,7 @@
 :root {
   /* Font families */
   --font-family-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
-  --font-family-serif: "Merriweather", ui-serif, Georgia, serif;
+  --font-family-serif: "Source Serif 4", ui-serif, Georgia, serif;
   --font-family-monospace: "Sometype Mono", ui-monospace, monospace;
   --font-family-headings: var(--font-family-sans);
   --font-family-body: var(--font-family-serif);
