@@ -1,7 +1,7 @@
 {
   "$schema": "design-map-v1",
   "version": "1.0.0",
-  "lastSynced": "2026-03-14T23:03:00Z",
+  "lastSynced": "2026-03-15T17:22:00Z",
   "lastSyncDirection": "figma-to-code",
 
   "meta": {
@@ -590,7 +590,7 @@
           "resolvedType": "STRING",
           "codeToken": "--font-family-serif",
           "tailwindKey": "fontFamily.serif",
-          "values": { "default": "Lora" },
+          "values": { "default": "Merriweather" },
           "codeFallbacks": "ui-serif, Georgia, serif",
           "aliasOf": null,
           "description": "Serif font family"
@@ -622,7 +622,7 @@
           "resolvedType": "STRING",
           "codeToken": "--font-family-body",
           "tailwindKey": "fontFamily.body",
-          "values": { "default": "Sometype Mono" },
+          "values": { "default": "Merriweather" },
           "aliasOf": "font definitions/font-family-serif",
           "description": "Body font family"
         },
@@ -1291,7 +1291,7 @@
       ]
     },
     "serif": {
-      "currentValue": "Lora",
+      "currentValue": "Merriweather",
       "fallbackStack": "ui-serif, Georgia, serif",
       "cdnProvider": "google-fonts",
       "cdnWeights": [400, 700],
@@ -1299,12 +1299,12 @@
         {
           "file": "src/app/layout.tsx",
           "action": "replace-cdn-link",
-          "description": "Replace the Lora family param in the Google Fonts href"
+          "description": "Replace the Merriweather family param in the Google Fonts href"
         },
         {
           "file": ".storybook/preview-head.html",
           "action": "replace-cdn-link",
-          "description": "Replace the Lora family param in the Google Fonts href"
+          "description": "Replace the Merriweather family param in the Google Fonts href"
         },
         {
           "file": "src/app/globals.css",
@@ -1369,7 +1369,7 @@
     "font-serif": {
       "token": "font-definitions/font-family-serif",
       "cssVar": "--font-family-serif",
-      "resolvedFont": "Lora",
+      "resolvedFont": "Merriweather",
       "usage": "Card descriptions, body text, supporting copy"
     },
     "font-mono": {
@@ -1381,6 +1381,14 @@
   },
 
   "syncLog": [
+    {
+      "timestamp": "2026-03-15T17:22:00Z",
+      "direction": "figma-to-code",
+      "action": "drift-sync",
+      "tokensChanged": ["font-definitions/font-family-serif", "font-definitions/font-family-body"],
+      "componentsChanged": [],
+      "notes": "font-family-serif changed from Lora to Merriweather. font-family-body alias now resolves to Merriweather. Updated CDN in layout.tsx and preview-head.html. globals.css --font-serif and typography.css --font-family-serif updated. fontConfig.serif.currentValue and syncTarget descriptions updated. All semantic colors, spacing, and border radii confirmed in sync."
+    },
     {
       "timestamp": "2026-03-14T23:03:00Z",
       "direction": "figma-to-code",
