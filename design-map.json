@@ -1,7 +1,7 @@
 {
   "$schema": "design-map-v1",
   "version": "1.0.0",
-  "lastSynced": "2026-03-15T17:13:00Z",
+  "lastSynced": "2026-03-16T17:17:00Z",
   "lastSyncDirection": "figma-to-code",
 
   "meta": {
@@ -40,8 +40,8 @@
           "resolvedType": "COLOR",
           "codeToken": "--foreground",
           "tailwindKey": "foreground",
-          "values": { "light": "#0A0A0A", "dark": "#FAFAFA" },
-          "aliasOf": "brand-neutrals/950",
+          "values": { "light": "#737373", "dark": "#FAFAFA" },
+          "aliasOf": "brand-neutrals/500",
           "description": "Default text color"
         },
         "general/primary": {
@@ -50,8 +50,8 @@
           "resolvedType": "COLOR",
           "codeToken": "--primary",
           "tailwindKey": "primary",
-          "values": { "light": "#2563EB", "dark": "#F5F5F5" },
-          "aliasOf": "brand-shades/600",
+          "values": { "light": "#0D9488", "dark": "#F5F5F5" },
+          "aliasOf": "teal/600",
           "description": "Primary action color"
         },
         "general/primary-foreground": {
@@ -590,7 +590,7 @@
           "resolvedType": "STRING",
           "codeToken": "--font-family-serif",
           "tailwindKey": "fontFamily.serif",
-          "values": { "default": "Merriweather" },
+          "values": { "default": "Source Serif 4" },
           "codeFallbacks": "ui-serif, Georgia, serif",
           "aliasOf": null,
           "description": "Serif font family"
@@ -622,7 +622,7 @@
           "resolvedType": "STRING",
           "codeToken": "--font-family-body",
           "tailwindKey": "fontFamily.body",
-          "values": { "default": "Merriweather" },
+          "values": { "default": "Source Serif 4" },
           "aliasOf": "font definitions/font-family-serif",
           "description": "Body font family"
         },
@@ -1291,7 +1291,7 @@
       ]
     },
     "serif": {
-      "currentValue": "Merriweather",
+      "currentValue": "Source Serif 4",
       "fallbackStack": "ui-serif, Georgia, serif",
       "cdnProvider": "google-fonts",
       "cdnWeights": [400, 700],
@@ -1299,12 +1299,12 @@
         {
           "file": "src/app/layout.tsx",
           "action": "replace-cdn-link",
-          "description": "Replace the Merriweather family param in the Google Fonts href"
+          "description": "Replace the Source Serif 4 family param in the Google Fonts href"
         },
         {
           "file": ".storybook/preview-head.html",
           "action": "replace-cdn-link",
-          "description": "Replace the Merriweather family param in the Google Fonts href"
+          "description": "Replace the Source Serif 4 family param in the Google Fonts href"
         },
         {
           "file": "src/app/globals.css",
@@ -1369,7 +1369,7 @@
     "font-serif": {
       "token": "font-definitions/font-family-serif",
       "cssVar": "--font-family-serif",
-      "resolvedFont": "Merriweather",
+      "resolvedFont": "Source Serif 4",
       "usage": "Card descriptions, body text, supporting copy"
     },
     "font-mono": {
@@ -1381,6 +1381,14 @@
   },
 
   "syncLog": [
+    {
+      "timestamp": "2026-03-16T17:17:00Z",
+      "direction": "figma-to-code",
+      "action": "drift-sync",
+      "tokensChanged": ["font-definitions/font-family-serif", "font-definitions/font-family-body", "general/foreground", "general/primary"],
+      "componentsChanged": [],
+      "notes": "font-family-serif changed from Merriweather to Source Serif 4. font-family-body alias now resolves to Source Serif 4. Updated CDN in layout.tsx and preview-head.html. globals.css --font-serif and typography.css --font-family-serif updated. fontConfig.serif.currentValue and syncTarget descriptions updated. general/foreground light changed from #0A0A0A (brand-neutrals/950) to #737373 (brand-neutrals/500). general/primary light changed from #2563EB (brand-shades/600) to #0D9488 (teal/600). Updated globals.css, semantic-colors.css, and design-map.json token values. All spacing, border radii, and remaining semantic colors confirmed in sync."
+    },
     {
       "timestamp": "2026-03-15T17:13:00Z",
       "direction": "figma-to-code",

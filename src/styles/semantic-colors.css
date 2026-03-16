@@ -6,8 +6,8 @@
 :root {
   /* General */
   --background: #FFFFFF;             /* Default page background */
-  --foreground: #0A0A0A;             /* Default text color */
-  --primary: #2563EB;                /* Primary action color */
+  --foreground: #737373;             /* Default text color */
+  --primary: #0D9488;                /* Primary action color */
   --primary-foreground: #FAFAFA;     /* Text on primary backgrounds */
   --secondary: #F5F5F5;              /* Secondary action color */
   --secondary-foreground: #171717;   /* Text on secondary backgrounds */
