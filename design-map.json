@@ -1,7 +1,7 @@
 {
   "$schema": "design-map-v1",
   "version": "1.0.0",
-  "lastSynced": "2026-05-04T02:39:00Z",
+  "lastSynced": "2026-05-04T02:51:00Z",
   "lastSyncDirection": "figma-to-code",
 
   "meta": {
@@ -50,8 +50,8 @@
           "resolvedType": "COLOR",
           "codeToken": "--primary",
           "tailwindKey": "primary",
-          "values": { "light": "#9D174D", "dark": "#F5F5F5" },
-          "aliasOf": "pink/800",
+          "values": { "light": "#B45309", "dark": "#F5F5F5" },
+          "aliasOf": "amber/700",
           "description": "Primary action color"
         },
         "general/primary-foreground": {
@@ -1381,6 +1381,14 @@
   },
 
   "syncLog": [
+    {
+      "timestamp": "2026-05-04T02:51:00Z",
+      "direction": "figma-to-code",
+      "action": "drift-sync",
+      "tokensChanged": ["general/primary"],
+      "componentsChanged": [],
+      "notes": "general/primary light changed from #9D174D (pink/800) to #B45309 (amber/700). Updated globals.css and semantic-colors.css. Typography, spacing, border radii, and remaining semantic colors confirmed in sync."
+    },
     {
       "timestamp": "2026-05-04T02:39:00Z",
       "direction": "figma-to-code",
