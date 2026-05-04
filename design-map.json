@@ -1,7 +1,7 @@
 {
   "$schema": "design-map-v1",
   "version": "1.0.0",
-  "lastSynced": "2026-03-17T04:57:00Z",
+  "lastSynced": "2026-05-04T02:39:00Z",
   "lastSyncDirection": "figma-to-code",
 
   "meta": {
@@ -50,8 +50,8 @@
           "resolvedType": "COLOR",
           "codeToken": "--primary",
           "tailwindKey": "primary",
-          "values": { "light": "#C026D3", "dark": "#F5F5F5" },
-          "aliasOf": "fuchsia/600",
+          "values": { "light": "#9D174D", "dark": "#F5F5F5" },
+          "aliasOf": "pink/800",
           "description": "Primary action color"
         },
         "general/primary-foreground": {
@@ -579,8 +579,8 @@
           "resolvedType": "STRING",
           "codeToken": "--font-family-sans",
           "tailwindKey": "fontFamily.sans",
-          "values": { "default": "Poppins" },
-          "codeFallbacks": "ui-sans-serif, system-ui, sans-serif",
+          "values": { "default": "SF Pro Rounded" },
+          "codeFallbacks": "-apple-system, BlinkMacSystemFont, ui-rounded, system-ui, sans-serif",
           "aliasOf": null,
           "description": "Sans-serif font family"
         },
@@ -590,8 +590,8 @@
           "resolvedType": "STRING",
           "codeToken": "--font-family-serif",
           "tailwindKey": "fontFamily.serif",
-          "values": { "default": "Sometype Mono" },
-          "codeFallbacks": "ui-monospace, monospace",
+          "values": { "default": "Inter" },
+          "codeFallbacks": "ui-sans-serif, system-ui, sans-serif",
           "aliasOf": null,
           "description": "Serif font family"
         },
@@ -612,7 +612,7 @@
           "resolvedType": "STRING",
           "codeToken": "--font-family-headings",
           "tailwindKey": "fontFamily.headings",
-          "values": { "default": "Poppins" },
+          "values": { "default": "SF Pro Rounded" },
           "aliasOf": "font definitions/font-family-sans",
           "description": "Headings font family"
         },
@@ -622,7 +622,7 @@
           "resolvedType": "STRING",
           "codeToken": "--font-family-body",
           "tailwindKey": "fontFamily.body",
-          "values": { "default": "Sometype Mono" },
+          "values": { "default": "Inter" },
           "aliasOf": "font definitions/font-family-serif",
           "description": "Body font family"
         },
@@ -632,7 +632,7 @@
           "resolvedType": "STRING",
           "codeToken": "--heading-1-font-family",
           "tailwindKey": "fontFamily.h1",
-          "values": { "default": "Poppins" },
+          "values": { "default": "SF Pro Rounded" },
           "aliasOf": "font definitions/font-family-headings",
           "description": "Heading 1 font family"
         },
@@ -696,7 +696,7 @@
           "resolvedType": "STRING",
           "codeToken": "--heading-2-font-family",
           "tailwindKey": "fontFamily.h2",
-          "values": { "default": "Poppins" },
+          "values": { "default": "SF Pro Rounded" },
           "aliasOf": "font definitions/font-family-headings",
           "description": "Heading 2 font family"
         },
@@ -760,7 +760,7 @@
           "resolvedType": "STRING",
           "codeToken": "--heading-3-font-family",
           "tailwindKey": "fontFamily.h3",
-          "values": { "default": "Poppins" },
+          "values": { "default": "SF Pro Rounded" },
           "aliasOf": "font definitions/font-family-headings",
           "description": "Heading 3 font family"
         },
@@ -824,7 +824,7 @@
           "resolvedType": "STRING",
           "codeToken": "--heading-4-font-family",
           "tailwindKey": "fontFamily.h4",
-          "values": { "default": "Poppins" },
+          "values": { "default": "SF Pro Rounded" },
           "aliasOf": "font definitions/font-family-headings",
           "description": "Heading 4 font family"
         },
@@ -1258,68 +1258,68 @@
 
   "fontConfig": {
     "sans": {
-      "currentValue": "Poppins",
-      "fallbackStack": "ui-sans-serif, system-ui, sans-serif",
-      "cdnProvider": "google-fonts",
-      "cdnWeights": [400, 500, 600, 700],
+      "currentValue": "SF Pro Rounded",
+      "fallbackStack": "-apple-system, BlinkMacSystemFont, ui-rounded, system-ui, sans-serif",
+      "cdnProvider": "system",
+      "cdnWeights": [],
       "syncTargets": [
         {
           "file": "src/app/layout.tsx",
           "action": "replace-cdn-link",
-          "description": "Replace the Poppins family param in the Google Fonts href"
+          "description": "SF Pro Rounded is a system font — remove sans family param from the Google Fonts href"
         },
         {
           "file": ".storybook/preview-head.html",
           "action": "replace-cdn-link",
-          "description": "Replace the Poppins family param in the Google Fonts href"
+          "description": "SF Pro Rounded is a system font — remove sans family param from the Google Fonts href and update body font-family"
         },
         {
           "file": "src/app/globals.css",
           "action": "replace-css-variable",
-          "description": "Update --font-sans to the new font name and fallback stack"
+          "description": "Update --font-sans to SF Pro Rounded with -apple-system fallback stack"
         },
         {
           "file": "src/styles/typography.css",
           "action": "replace-css-variable",
-          "description": "Update --font-family-sans to the new font name and fallback stack"
+          "description": "Update --font-family-sans to SF Pro Rounded with -apple-system fallback stack"
         },
         {
           "file": "design-map.json",
           "action": "update-typography-assignments",
-          "description": "Update typographyAssignments.font-sans.resolvedFont to the new font name"
+          "description": "Update typographyAssignments.font-sans.resolvedFont to SF Pro Rounded"
         }
       ]
     },
     "serif": {
-      "currentValue": "Sometype Mono",
-      "fallbackStack": "ui-monospace, monospace",
+      "currentValue": "Inter",
+      "fallbackStack": "ui-sans-serif, system-ui, sans-serif",
       "cdnProvider": "google-fonts",
       "cdnWeights": [400, 500, 700],
       "syncTargets": [
         {
           "file": "src/app/layout.tsx",
           "action": "replace-cdn-link",
-          "description": "Replace the Sometype Mono family param in the Google Fonts href"
+          "description": "Replace the Inter family param in the Google Fonts href"
         },
         {
           "file": ".storybook/preview-head.html",
           "action": "replace-cdn-link",
-          "description": "Replace the Sometype Mono family param in the Google Fonts href"
+          "description": "Replace the Inter family param in the Google Fonts href"
         },
         {
           "file": "src/app/globals.css",
           "action": "replace-css-variable",
-          "description": "Update --font-serif to the new font name and fallback stack"
+          "description": "Update --font-serif to Inter with sans-serif fallback stack"
         },
         {
           "file": "src/styles/typography.css",
           "action": "replace-css-variable",
-          "description": "Update --font-family-serif to the new font name and fallback stack"
+          "description": "Update --font-family-serif to Inter with sans-serif fallback stack"
         },
         {
           "file": "design-map.json",
           "action": "update-typography-assignments",
-          "description": "Update typographyAssignments.font-serif.resolvedFont to the new font name"
+          "description": "Update typographyAssignments.font-serif.resolvedFont to Inter"
         }
       ]
     },
@@ -1363,13 +1363,13 @@
     "font-sans": {
       "token": "font-definitions/font-family-sans",
       "cssVar": "--font-family-sans",
-      "resolvedFont": "Poppins",
+      "resolvedFont": "SF Pro Rounded",
       "usage": "Headings, button labels, UI controls"
     },
     "font-serif": {
       "token": "font-definitions/font-family-serif",
       "cssVar": "--font-family-serif",
-      "resolvedFont": "Sometype Mono",
+      "resolvedFont": "Inter",
       "usage": "Card descriptions, body text, supporting copy"
     },
     "font-mono": {
@@ -1381,6 +1381,14 @@
   },
 
   "syncLog": [
+    {
+      "timestamp": "2026-05-04T02:39:00Z",
+      "direction": "figma-to-code",
+      "action": "drift-sync",
+      "tokensChanged": ["font-definitions/font-family-sans", "font-definitions/font-family-serif", "font-definitions/font-family-headings", "font-definitions/font-family-body", "heading-1/font-family", "heading-2/font-family", "heading-3/font-family", "heading-4/font-family", "general/primary"],
+      "componentsChanged": [],
+      "notes": "font-family-sans changed from Poppins to SF Pro Rounded (system font — Apple). font-family-headings alias and heading 1-4 font-family resolutions cascade to SF Pro Rounded. Poppins removed from Google Fonts CDN in layout.tsx and preview-head.html; replaced with -apple-system fallback stack. fontConfig.sans now uses cdnProvider 'system' with empty cdnWeights. font-family-serif changed from Sometype Mono to Inter. font-family-body alias now resolves to Inter. Inter added to Google Fonts CDN (Sometype Mono kept for --font-mono). globals.css --font-serif and typography.css --font-family-serif updated with sans-serif fallback stack. fontConfig.serif.fallbackStack and syncTarget descriptions updated. general/primary light changed from #C026D3 (fuchsia/600) to #9D174D (pink/800). Updated globals.css and semantic-colors.css. All spacing, border radii, and remaining semantic colors confirmed in sync."
+    },
     {
       "timestamp": "2026-03-17T04:57:00Z",
       "direction": "figma-to-code",
