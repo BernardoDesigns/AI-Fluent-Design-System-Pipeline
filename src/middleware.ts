@@ -1,8 +1,10 @@
+import { NextRequest, NextResponse } from 'next/server';
+
 export const config = {
   matcher: '/((?!api|unlock|_next/static|_next/image|.*\\.(?:css|js|png|jpg|jpeg|svg|gif|webp|ico|woff|woff2|ttf|eot|json|map)$).*)',
 };
 
-export default async function middleware(request: Request): Promise<Response | undefined> {
+export default async function middleware(request: NextRequest): Promise<NextResponse> {
   const secret = process.env.SESSION_SECRET;
   if (!secret) return redirectToUnlock(request);
 
@@ -17,16 +19,14 @@ export default async function middleware(request: Request): Promise<Response | u
   const valid = await verifyHmac(expiresAtStr, sig, secret);
   if (!valid) return redirectToUnlock(request);
 
-  return undefined;
+  return NextResponse.next();
 }
 
-function redirectToUnlock(request: Request): Response {
+function redirectToUnlock(request: NextRequest): NextResponse {
   const url = new URL(request.url);
   const next = encodeURIComponent(url.pathname + url.search);
-  return new Response(null, {
-    status: 302,
-    headers: { Location: `/unlock.html?next=${next}` },
-  });
+  const redirectUrl = new URL(`/unlock.html?next=${next}`, request.url);
+  return NextResponse.redirect(redirectUrl);
 }
 
 async function verifyHmac(payload: string, sigHex: string, secret: string): Promise<boolean> {
