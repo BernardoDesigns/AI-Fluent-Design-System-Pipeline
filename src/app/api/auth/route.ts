@@ -18,7 +18,7 @@ export async function POST(req: Request) {
     });
   }
 
-  const expiresAt = Date.now() + 30 * 24 * 60 * 60 * 1000;
+  const expiresAt = Date.now() + 4 * 60 * 60 * 1000;
   const signature = await signHmac(String(expiresAt), secret);
   const token = `${expiresAt}.${signature}`;
 
