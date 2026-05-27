@@ -26,7 +26,7 @@ export async function POST(req: Request) {
     status: 200,
     headers: {
       'Content-Type': 'application/json',
-      'Set-Cookie': `pm_session=${token}; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=${30 * 24 * 60 * 60}`,
+      'Set-Cookie': `pm_session=${token}; Path=/; HttpOnly; Secure; SameSite=Lax`,
     },
   });
 }
