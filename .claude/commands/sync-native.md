@@ -70,6 +70,8 @@ return { fileKey: figma.fileKey, collection: col.name, count: out.length, variab
 
 Check `fileKey` in every response is still `oodzXY4lwyWIu5qK05VTP7`. If not, STOP.
 
+If any read comes back truncated or over the output limit, re-read that collection alone in a compact form, then cross-check counts, IDs, values, names and alias targets against the first read before applying anything. Never apply a partial read.
+
 ## Match
 
 **Join key is `figmaVariableId`. Never match by name.** Names are labels. Map keys are stable slugs owned by the map (`general/primary-foreground`) and deliberately don't follow Figma names (`general/primary foreground`), so name matching would produce false adds/deletes.
@@ -84,7 +86,7 @@ For each Figma variable, find the map token with the same `figmaVariableId` in t
 
 Compare against the map in this order:
 
-1. **Name.** If Figma `name` ≠ `figmaName`: update `figmaName` only.
+1. **Name.** `figmaName` stores the full Figma path (`general/primary foreground`, not `primary foreground`). If the full Figma `name` ≠ `figmaName`: update `figmaName` only.
    - **Never rename the map key.** Keys are stable slugs; the ID is the join key, so the key never needs to follow Figma. This keeps Figma's spaces and commas out of the map.
    - **Never change `codeToken` or `tailwindKey`** because of a Figma rename. If the new name looks like it implies a code-name change, flag it in the summary under Renames and leave it.
    - Don't compare Figma `name` to the map key. They're expected to differ.
