@@ -192,11 +192,13 @@ Used for audit trail and drift detection.
 
 ## How Claude Code Uses This File
 
-**Reading (Figma to Code):** Calls `figma_get_variables` via MCP, looks up the matching variable in the map, reads `codeToken` and `tailwindKey`, generates CSS/Tailwind output.
+All Figma access goes through the native Figma MCP (`plugin:figma:figma`), using the `use_figma` tool (Plugin API scripts). Every call first checks `figma.fileKey` against `meta.figmaFileKey` and stops on any other key.
 
-**Writing (Code to Figma):** Detects a code change, looks up the `figmaVariableId` in the map, calls `figma_update_variable` via MCP to push the new value.
+**Reading (Figma to Code):** `/sync` runs read-only `use_figma` scripts over each mapped collection (`getVariableCollectionByIdAsync`, `getVariableByIdAsync`), pairs each variable to its map entry by `figmaVariableId`, reads `codeToken` and `tailwindKey`, and generates CSS/Tailwind output. Alias bindings are read from the raw `valuesByMode` and stored in `aliasTargets`, not flattened.
 
-**Drift Detection:** Compares current Figma values against stored `values` in the map. Flags mismatches.
+**Writing (Code to Figma):** Looks up the `figmaVariableId` in the map, then uses `use_figma` to call `setValueForMode` on that variable (raw values, or `figma.variables.createVariableAlias(target)` for aliases) and reads the value back to verify it. No command does this yet; `/sync` is Figma → code only. Test writes against the scratch copy first.
+
+**Drift Detection:** Compares current Figma values against stored `values`, and current alias target IDs against `aliasTargets`, per mode. Flags value and binding changes separately.
 
 ---
 
@@ -204,11 +206,11 @@ Used for audit trail and drift detection.
 
 The placeholder IDs need to be replaced with real data from your Figma file:
 
-1. Install Figma Console MCP and connect to your Obra kit
-2. Run `figma_get_variables` with your file URL
+1. Connect the native Figma MCP in Claude Code (`/mcp`, server `plugin:figma:figma`)
+2. Run a read-only `use_figma` script against your file key: `getLocalVariableCollectionsAsync()` for collection and mode IDs, then `getVariableByIdAsync()` per variable for IDs, full names, raw `valuesByMode` and alias targets
 3. Copy real collection IDs, mode IDs, and variable IDs into this file
-4. Map each Figma variable name to its code equivalent
-5. For components, use `figma_get_component` to pull keys and node IDs
+4. Map each Figma variable to its code equivalent (`codeToken`, `tailwindKey`). Keys are stable slugs; `figmaName` is the full Figma path
+5. For components, use `get_metadata` or a read-only `use_figma` script to pull component keys and node IDs
 
 One-time setup. After that, Claude Code maintains the file during sync operations.
 
