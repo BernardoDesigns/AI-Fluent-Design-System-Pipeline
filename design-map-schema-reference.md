@@ -93,21 +93,50 @@ The `modes` object maps your mode names to Figma mode IDs and CSS selectors. Thi
   "tailwindKey": "primary",
   "values": { "light": "#171717", "dark": "#FAFAFA" },
   "aliasOf": null,
+  "aliasTargets": { "light": null, "dark": null },
   "description": "Primary action color"
 }
 ```
 
+The token key (`"colors/primary"` above) is a stable slug owned by the map. It does not follow Figma renames. `figmaVariableId` is the join key; `figmaName` tracks the current Figma name.
+
 | Field | Type | Description |
 |-------|------|-------------|
-| `figmaVariableId` | string | Figma's internal variable ID. Used for write operations. |
-| `figmaName` | string | Variable name as it appears in Figma |
+| `figmaVariableId` | string | Figma's internal variable ID. The join key between Figma and the map: sync matches on this, never on name. Also used for write operations. |
+| `figmaName` | string | Variable name as it appears in Figma. Updated on sync when Figma renames the variable. |
 | `resolvedType` | string | `"COLOR"`, `"FLOAT"`, `"STRING"`, or `"BOOLEAN"` |
 | `codeToken` | string | CSS custom property name |
 | `tailwindKey` | string | Tailwind config key |
 | `values` | object | Resolved values per mode |
 | `unit` | string? | For FLOAT types: `"px"`, `"rem"`, `"%"` etc |
-| `aliasOf` | string? | If this aliases another token, the source token's figmaName |
+| `aliasOf` | string? | Legacy. Name of the direct alias target in the default (light) mode, or null. Name only, one mode only. Kept for backward compatibility; use `aliasTargets` for diffing. |
+| `aliasTargets` | object? | Per-mode alias binding, keyed by the collection's mode names. See below. |
+| `status` | string? | Only on draft entries added by sync for variables new in Figma: `"new-unreviewed"` or `"ignored-candidate"`. These have `codeToken`/`tailwindKey` null and aren't emitted to code until reviewed. Absent on shipped tokens. |
 | `description` | string | What this token is for |
+
+#### aliasTargets
+
+Records what each mode is bound to, by ID, with the full chain. Never flattened.
+
+```
+"aliasTargets": {
+  "light": {
+    "id": "VariableID:1699:8",
+    "name": "brand-neutrals/500",
+    "chain": [
+      { "id": "VariableID:1699:8", "name": "brand-neutrals/500" },
+      { "id": "VariableID:6:106",  "name": "neutral/500" }
+    ]
+  },
+  "dark": null
+}
+```
+
+- `id` / `name`: the direct target (first hop).
+- `chain`: every hop from the direct target to the variable holding the raw value, in order. The terminal value itself lives in `values`.
+- A mode set to `null` holds a raw value, not an alias.
+- Sync diffs bindings on `id`, independently of `values`. A binding can change while the hex stays the same, and vice versa.
+- Chains are walked using each target collection's default mode. Correct when targets are single-mode (raw colors, brand colors, alpha); not reliable if a token aliases another multi-mode token.
 
 ---
 
