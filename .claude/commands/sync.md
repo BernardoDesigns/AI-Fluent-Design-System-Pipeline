@@ -131,15 +131,17 @@ Scope stays at the collections already in the map. Don't read or add other colle
 
 ## Sync
 
-Switch to a new branch named `design-system-update/token-sync-{today's date and time as YYYY-MM-DD-HHmm}`.
+Do this only after Read Figma, Match and Diff are complete. The diff runs on `main`, before any branch exists.
+
+If nothing changed (no value, binding, `figmaName`, NEW or MISSING): **don't create a branch.** Stay on `main`, make no commit, don't push, and tell me it's in sync.
+
+Otherwise, switch to a new branch named `design-system-update/token-sync-{today's date and time as YYYY-MM-DD-HHmm}`.
 
 Apply the changes:
 
 - design-map.json: `figmaName` updates, `values`, `aliasOf`, `aliasTargets`, draft NEW entries, `lastSynced` (ISO timestamp), `lastSyncDirection: "figma-to-code"`, and append a `syncLog` entry (`timestamp`, `direction`, `action: "native-sync"`, `tokensChanged`, `componentsChanged`, `notes` including binding changes, NEW and MISSING counts).
 - Code files: only for matched tokens whose resolved value changed.
 - For any font-family changes, read the `fontConfig.fonts` section and follow every `syncTarget` for each changed font.
-
-If nothing changed (no value, binding, `figmaName`, NEW or MISSING), don't create a commit. Delete the branch, switch back to main, and tell me it's in sync.
 
 Commit all changes to this branch and push to origin.
 
