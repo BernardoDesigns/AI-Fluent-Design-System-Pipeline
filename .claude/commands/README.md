@@ -6,7 +6,8 @@ Type `/project:commandname` in Claude Code to run any of these.
 | Command | What it does |
 |---------|-------------|
 | `/project:status` | Pre-flight check. Verifies Figma connection, git state, dependencies. Run this first. |
-| `/project:sync` | Full sync. Creates branch, syncs all tokens from Figma, commits and pushes. |
+| `/project:sync` | Full sync over the native Figma MCP. Creates branch, syncs all tokens from Figma by variable ID, commits and pushes. |
+| `/project:sync-legacy` | RETIRED. Old Desktop Bridge sync, kept for reference. Don't run. |
 | `/project:reset` | Emergency reset. Returns to clean main, clears all caches. |
 | `/project:map` | Quick summary of everything in design-map.json. |
 | `/project:demo-prep` | Pre-demo checklist. Verifies every piece is ready for a live run. |
@@ -21,5 +22,6 @@ Type `/project:commandname` in Claude Code to run any of these.
 ## Notes
 
 - The `sync` command uses "Switch to" as the opening verb intentionally. "Create" and "Build" trigger Claude Code built-in skills and cause problems.
-- All commands check Figma connection first and will tell you to restart the Desktop Bridge if it's down.
+- Figma access is the native Figma MCP (`plugin:figma:figma`, `use_figma` tool). Commands that touch Figma run a read-only file-key guard first (live file `oodzXY4lwyWIu5qK05VTP7`) and stop on any other key. If the tool is missing, reconnect with `/mcp`.
+- The Figma Console MCP / Desktop Bridge is retired. See the teardown section in `reset.md`.
 - These are project-scoped commands (committed to the repo). Team members get them automatically on clone.

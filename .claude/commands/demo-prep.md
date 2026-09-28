@@ -1,6 +1,6 @@
 ---
 description: Pre-demo checklist. Verifies every piece of the pipeline is ready for a live demonstration.
-allowed-tools: Bash(git:*), Bash(npm:*), Bash(lsof:*), Read
+allowed-tools: Bash(git:*), Bash(npm:*), Bash(lsof:*), Read, Skill, mcp__plugin_figma_figma__use_figma
 ---
 
 # Demo Prep Checklist
@@ -8,7 +8,7 @@ allowed-tools: Bash(git:*), Bash(npm:*), Bash(lsof:*), Read
 Run through every item and report pass/fail. Stop on the first failure and tell me how to fix it.
 
 ## Connections
-1. **Figma connection**: Run `Check Figma status`. Must show WebSocket Bridge active.
+1. **Figma connection**: Load the `figma:figma-use` skill, then run one READ-ONLY `use_figma` call (`plugin:figma:figma`) with `fileKey: "oodzXY4lwyWIu5qK05VTP7"` that returns `figma.fileKey`. Must return `oodzXY4lwyWIu5qK05VTP7`. If the tool is missing, tell me to reconnect with `/mcp`.
 2. **Git status**: Must be on `main` with a clean working tree.
 3. **Remote sync**: `git pull origin main` should show "Already up to date" or pull cleanly.
 
