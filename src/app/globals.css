@@ -7,8 +7,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: "SF Pro Rounded", -apple-system, BlinkMacSystemFont, ui-rounded, system-ui, sans-serif;
-  --font-serif: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Source Serif 4", ui-serif, Georgia, serif;
   --font-mono: "Sometype Mono", ui-monospace, monospace;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -55,7 +55,7 @@
   --card-foreground: #0A0A0A;
   --popover: #000000;
   --popover-foreground: #FFFFFF;
-  --primary: #B45309;
+  --primary: #3B82F6;
   --primary-foreground: #FAFAFA;
   --secondary: #F5F5F5;
   --secondary-foreground: #171717;
@@ -63,7 +63,7 @@
   --muted-foreground: #737373;
   --accent: #F5F5F5;
   --accent-foreground: #171717;
-  --destructive: #DC2626;
+  --destructive: #FDBA74;
   --border: #E5E5E5;
   --input: #FFFFFF;
   --ring: #D4D4D4;
@@ -90,7 +90,7 @@
   --card-foreground: #FFFFFF;
   --popover: #FFFFFF;
   --popover-foreground: #000000;
-  --primary: #F5F5F5;
+  --primary: #BFDBFE;
   --primary-foreground: #0A0A0A;
   --secondary: #262626;
   --secondary-foreground: #F5F5F5;

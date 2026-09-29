@@ -2,14 +2,14 @@
 
 :root {
   /* Font families */
-  --font-family-sans: "SF Pro Rounded", -apple-system, BlinkMacSystemFont, ui-rounded, system-ui, sans-serif;
-  --font-family-serif: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-family-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-family-serif: "Source Serif 4", ui-serif, Georgia, serif;
   --font-family-monospace: "Sometype Mono", ui-monospace, monospace;
-  --font-family-headings: var(--font-family-sans);
-  --font-family-body: var(--font-family-serif);
+  --font-family-headings: var(--font-family-serif);
+  --font-family-body: var(--font-family-sans);
 
   /* Heading 1 */
-  --heading-1-font-family: var(--font-family-headings);
+  --heading-1-font-family: var(--font-family-sans);
   --heading-1-weight: 600;
   --heading-1-font-size: 48px;
   --heading-1-line-height: 48px;
@@ -17,7 +17,7 @@
   --heading-1-letter-spacing: -1.5px;
 
   /* Heading 2 */
-  --heading-2-font-family: var(--font-family-headings);
+  --heading-2-font-family: var(--font-family-sans);
   --heading-2-weight: 600;
   --heading-2-font-size: 30px;
   --heading-2-line-height: 30px;
@@ -25,7 +25,7 @@
   --heading-2-letter-spacing: -1px;
 
   /* Heading 3 */
-  --heading-3-font-family: var(--font-family-headings);
+  --heading-3-font-family: var(--font-family-sans);
   --heading-3-weight: 600;
   --heading-3-font-size: 24px;
   --heading-3-line-height: 28.8px;
@@ -33,7 +33,7 @@
   --heading-3-letter-spacing: -1px;
 
   /* Heading 4 */
-  --heading-4-font-family: var(--font-family-headings);
+  --heading-4-font-family: var(--font-family-sans);
   --heading-4-weight: 600;
   --heading-4-font-size: 20px;
   --heading-4-line-height: 24px;
