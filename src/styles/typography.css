@@ -2,11 +2,11 @@
 
 :root {
   /* Font families */
-  --font-family-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-family-sans: "SF Pro Rounded", -apple-system, BlinkMacSystemFont, ui-rounded, system-ui, sans-serif;
   --font-family-serif: "Source Serif 4", ui-serif, Georgia, serif;
   --font-family-monospace: "Sometype Mono", ui-monospace, monospace;
-  --font-family-headings: var(--font-family-serif);
-  --font-family-body: var(--font-family-sans);
+  --font-family-headings: var(--font-family-sans);
+  --font-family-body: var(--font-family-serif);
 
   /* Heading 1 */
   --heading-1-font-family: var(--font-family-sans);
