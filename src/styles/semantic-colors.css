@@ -7,7 +7,7 @@
   /* General */
   --background: #FFFFFF;             /* Default page background */
   --foreground: #737373;             /* Default text color */
-  --primary: #3B82F6;                /* Primary action color */
+  --primary: #EA580C;                /* Primary action color */
   --primary-foreground: #FAFAFA;     /* Text on primary backgrounds */
   --secondary: #F5F5F5;              /* Secondary action color */
   --secondary-foreground: #171717;   /* Text on secondary backgrounds */
@@ -15,7 +15,7 @@
   --muted-foreground: #737373;       /* Text on muted backgrounds */
   --accent: #F5F5F5;                 /* Accent background */
   --accent-foreground: #171717;      /* Text on accent backgrounds */
-  --destructive: #FDBA74;            /* Danger and error states */
+  --destructive: #C026D3;            /* Danger and error states */
   --destructive-foreground: #FFFFFF; /* Text on destructive backgrounds */
   --border: #E5E5E5;                 /* Default border color */
   --input: #FFFFFF;                  /* Input background */
@@ -49,7 +49,7 @@
   /* General */
   --background: #000000;             /* Default page background */
   --foreground: #FAFAFA;             /* Default text color */
-  --primary: #BFDBFE;                /* Primary action color */
+  --primary: #FED7AA;                /* Primary action color */
   --primary-foreground: #0A0A0A;     /* Text on primary backgrounds */
   --secondary: #262626;              /* Secondary action color */
   --secondary-foreground: #F5F5F5;   /* Text on secondary backgrounds */
@@ -57,7 +57,7 @@
   --muted-foreground: #A3A3A3;       /* Text on muted backgrounds */
   --accent: #171717;                 /* Accent background */
   --accent-foreground: #F5F5F5;      /* Text on accent backgrounds */
-  --destructive: #9E4042;            /* Danger and error states */
+  --destructive: #F0ABFC;            /* Danger and error states */
   --destructive-foreground: #FFFFFF; /* Text on destructive backgrounds */
   --border: #404040;                 /* Default border color */
   --input: #FFFFFF0D;                /* Input background */
