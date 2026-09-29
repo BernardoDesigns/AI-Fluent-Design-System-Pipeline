@@ -1,7 +1,7 @@
 {
   "$schema": "design-map-v1",
   "version": "1.0.0",
-  "lastSynced": "2026-09-28T19:02:18Z",
+  "lastSynced": "2026-09-29T17:20:41Z",
   "lastSyncDirection": "figma-to-code",
 
   "meta": {
@@ -52,9 +52,9 @@
           "resolvedType": "COLOR",
           "codeToken": "--primary",
           "tailwindKey": "primary",
-          "values": { "light": "#B45309", "dark": "#F5F5F5" },
-          "aliasOf": "amber/700",
-          "aliasTargets": { "light": { "id": "VariableID:534:30373", "name": "amber/700", "chain": [ { "id": "VariableID:534:30373", "name": "amber/700" } ] }, "dark": { "id": "VariableID:1699:4", "name": "brand-neutrals/100", "chain": [ { "id": "VariableID:1699:4", "name": "brand-neutrals/100" }, { "id": "VariableID:6:102", "name": "neutral/100" } ] } },
+          "values": { "light": "#3B82F6", "dark": "#BFDBFE" },
+          "aliasOf": "blue/500",
+          "aliasTargets": { "light": { "id": "VariableID:16:2018", "name": "blue/500", "chain": [ { "id": "VariableID:16:2018", "name": "blue/500" } ] }, "dark": { "id": "VariableID:16:2015", "name": "blue/200", "chain": [ { "id": "VariableID:16:2015", "name": "blue/200" } ] } },
           "description": "Primary action color"
         },
         "general/primary-foreground": {
@@ -140,9 +140,9 @@
           "resolvedType": "COLOR",
           "codeToken": "--destructive",
           "tailwindKey": "destructive",
-          "values": { "light": "#DC2626", "dark": "#9E4042" },
-          "aliasOf": "red/600",
-          "aliasTargets": { "light": { "id": "VariableID:16:1997", "name": "red/600", "chain": [ { "id": "VariableID:16:1997", "name": "red/600" } ] }, "dark": null },
+          "values": { "light": "#FDBA74", "dark": "#9E4042" },
+          "aliasOf": "orange/300",
+          "aliasTargets": { "light": { "id": "VariableID:534:30358", "name": "orange/300", "chain": [ { "id": "VariableID:534:30358", "name": "orange/300" } ] }, "dark": null },
           "description": "Danger and error states"
         },
         "general/destructive-foreground": {
@@ -1159,8 +1159,8 @@
           "resolvedType": "STRING",
           "codeToken": "--font-family-sans",
           "tailwindKey": "fontFamily.sans",
-          "values": { "default": "SF Pro Rounded" },
-          "codeFallbacks": "-apple-system, BlinkMacSystemFont, ui-rounded, system-ui, sans-serif",
+          "values": { "default": "Inter" },
+          "codeFallbacks": "ui-sans-serif, system-ui, sans-serif",
           "aliasOf": null,
           "aliasTargets": { "default": null },
           "description": "Sans-serif font family"
@@ -1171,8 +1171,8 @@
           "resolvedType": "STRING",
           "codeToken": "--font-family-serif",
           "tailwindKey": "fontFamily.serif",
-          "values": { "default": "Inter" },
-          "codeFallbacks": "ui-sans-serif, system-ui, sans-serif",
+          "values": { "default": "Source Serif 4" },
+          "codeFallbacks": "ui-serif, Georgia, serif",
           "aliasOf": null,
           "aliasTargets": { "default": null },
           "description": "Serif font family"
@@ -1195,9 +1195,9 @@
           "resolvedType": "STRING",
           "codeToken": "--font-family-headings",
           "tailwindKey": "fontFamily.headings",
-          "values": { "default": "SF Pro Rounded" },
-          "aliasOf": "font definitions/font-family-sans",
-          "aliasTargets": { "default": { "id": "VariableID:845:1253574", "name": "font definitions/font-family-sans", "chain": [ { "id": "VariableID:845:1253574", "name": "font definitions/font-family-sans" } ] } },
+          "values": { "default": "Source Serif 4" },
+          "aliasOf": "font definitions/font-family-serif",
+          "aliasTargets": { "default": { "id": "VariableID:845:1253576", "name": "font definitions/font-family-serif", "chain": [ { "id": "VariableID:845:1253576", "name": "font definitions/font-family-serif" } ] } },
           "description": "Headings font family"
         },
         "font-definitions/font-family-body": {
@@ -1207,8 +1207,8 @@
           "codeToken": "--font-family-body",
           "tailwindKey": "fontFamily.body",
           "values": { "default": "Inter" },
-          "aliasOf": "font definitions/font-family-serif",
-          "aliasTargets": { "default": { "id": "VariableID:845:1253576", "name": "font definitions/font-family-serif", "chain": [ { "id": "VariableID:845:1253576", "name": "font definitions/font-family-serif" } ] } },
+          "aliasOf": "font definitions/font-family-sans",
+          "aliasTargets": { "default": { "id": "VariableID:845:1253574", "name": "font definitions/font-family-sans", "chain": [ { "id": "VariableID:845:1253574", "name": "font definitions/font-family-sans" } ] } },
           "description": "Body font family"
         },
         "heading-1/font-family": {
@@ -1217,9 +1217,9 @@
           "resolvedType": "STRING",
           "codeToken": "--heading-1-font-family",
           "tailwindKey": "fontFamily.h1",
-          "values": { "default": "SF Pro Rounded" },
-          "aliasOf": "font definitions/font-family-headings",
-          "aliasTargets": { "default": { "id": "VariableID:845:1253585", "name": "font definitions/font-family-headings", "chain": [ { "id": "VariableID:845:1253585", "name": "font definitions/font-family-headings" }, { "id": "VariableID:845:1253574", "name": "font definitions/font-family-sans" } ] } },
+          "values": { "default": "Inter" },
+          "aliasOf": "font definitions/font-family-sans",
+          "aliasTargets": { "default": { "id": "VariableID:845:1253574", "name": "font definitions/font-family-sans", "chain": [ { "id": "VariableID:845:1253574", "name": "font definitions/font-family-sans" } ] } },
           "description": "Heading 1 font family"
         },
         "heading-1/weight": {
@@ -1287,9 +1287,9 @@
           "resolvedType": "STRING",
           "codeToken": "--heading-2-font-family",
           "tailwindKey": "fontFamily.h2",
-          "values": { "default": "SF Pro Rounded" },
-          "aliasOf": "font definitions/font-family-headings",
-          "aliasTargets": { "default": { "id": "VariableID:845:1253585", "name": "font definitions/font-family-headings", "chain": [ { "id": "VariableID:845:1253585", "name": "font definitions/font-family-headings" }, { "id": "VariableID:845:1253574", "name": "font definitions/font-family-sans" } ] } },
+          "values": { "default": "Inter" },
+          "aliasOf": "font definitions/font-family-sans",
+          "aliasTargets": { "default": { "id": "VariableID:845:1253574", "name": "font definitions/font-family-sans", "chain": [ { "id": "VariableID:845:1253574", "name": "font definitions/font-family-sans" } ] } },
           "description": "Heading 2 font family"
         },
         "heading-2/weight": {
@@ -1357,9 +1357,9 @@
           "resolvedType": "STRING",
           "codeToken": "--heading-3-font-family",
           "tailwindKey": "fontFamily.h3",
-          "values": { "default": "SF Pro Rounded" },
-          "aliasOf": "font definitions/font-family-headings",
-          "aliasTargets": { "default": { "id": "VariableID:845:1253585", "name": "font definitions/font-family-headings", "chain": [ { "id": "VariableID:845:1253585", "name": "font definitions/font-family-headings" }, { "id": "VariableID:845:1253574", "name": "font definitions/font-family-sans" } ] } },
+          "values": { "default": "Inter" },
+          "aliasOf": "font definitions/font-family-sans",
+          "aliasTargets": { "default": { "id": "VariableID:845:1253574", "name": "font definitions/font-family-sans", "chain": [ { "id": "VariableID:845:1253574", "name": "font definitions/font-family-sans" } ] } },
           "description": "Heading 3 font family"
         },
         "heading-3/weight": {
@@ -1427,9 +1427,9 @@
           "resolvedType": "STRING",
           "codeToken": "--heading-4-font-family",
           "tailwindKey": "fontFamily.h4",
-          "values": { "default": "SF Pro Rounded" },
-          "aliasOf": "font definitions/font-family-headings",
-          "aliasTargets": { "default": { "id": "VariableID:845:1253585", "name": "font definitions/font-family-headings", "chain": [ { "id": "VariableID:845:1253585", "name": "font definitions/font-family-headings" }, { "id": "VariableID:845:1253574", "name": "font definitions/font-family-sans" } ] } },
+          "values": { "default": "Inter" },
+          "aliasOf": "font definitions/font-family-sans",
+          "aliasTargets": { "default": { "id": "VariableID:845:1253574", "name": "font definitions/font-family-sans", "chain": [ { "id": "VariableID:845:1253574", "name": "font definitions/font-family-sans" } ] } },
           "description": "Heading 4 font family"
         },
         "heading-4/weight": {
@@ -1896,68 +1896,68 @@
 
   "fontConfig": {
     "sans": {
-      "currentValue": "SF Pro Rounded",
-      "fallbackStack": "-apple-system, BlinkMacSystemFont, ui-rounded, system-ui, sans-serif",
-      "cdnProvider": "system",
-      "cdnWeights": [],
+      "currentValue": "Inter",
+      "fallbackStack": "ui-sans-serif, system-ui, sans-serif",
+      "cdnProvider": "google-fonts",
+      "cdnWeights": [400, 500, 600, 700],
       "syncTargets": [
         {
           "file": "src/app/layout.tsx",
           "action": "replace-cdn-link",
-          "description": "SF Pro Rounded is a system font — remove sans family param from the Google Fonts href"
+          "description": "Replace the Inter family param in the Google Fonts href"
         },
         {
           "file": ".storybook/preview-head.html",
           "action": "replace-cdn-link",
-          "description": "SF Pro Rounded is a system font — remove sans family param from the Google Fonts href and update body font-family"
+          "description": "Replace the Inter family param in the Google Fonts href and update body font-family"
         },
         {
           "file": "src/app/globals.css",
           "action": "replace-css-variable",
-          "description": "Update --font-sans to SF Pro Rounded with -apple-system fallback stack"
+          "description": "Update --font-sans to Inter with sans-serif fallback stack"
         },
         {
           "file": "src/styles/typography.css",
           "action": "replace-css-variable",
-          "description": "Update --font-family-sans to SF Pro Rounded with -apple-system fallback stack"
+          "description": "Update --font-family-sans to Inter with sans-serif fallback stack"
         },
         {
           "file": "design-map.json",
           "action": "update-typography-assignments",
-          "description": "Update typographyAssignments.font-sans.resolvedFont to SF Pro Rounded"
+          "description": "Update typographyAssignments.font-sans.resolvedFont to Inter"
         }
       ]
     },
     "serif": {
-      "currentValue": "Inter",
-      "fallbackStack": "ui-sans-serif, system-ui, sans-serif",
+      "currentValue": "Source Serif 4",
+      "fallbackStack": "ui-serif, Georgia, serif",
       "cdnProvider": "google-fonts",
-      "cdnWeights": [400, 500, 700],
+      "cdnWeights": [400, 500, 600, 700],
       "syncTargets": [
         {
           "file": "src/app/layout.tsx",
           "action": "replace-cdn-link",
-          "description": "Replace the Inter family param in the Google Fonts href"
+          "description": "Replace the Source Serif 4 family param in the Google Fonts href"
         },
         {
           "file": ".storybook/preview-head.html",
           "action": "replace-cdn-link",
-          "description": "Replace the Inter family param in the Google Fonts href"
+          "description": "Replace the Source Serif 4 family param in the Google Fonts href"
         },
         {
           "file": "src/app/globals.css",
           "action": "replace-css-variable",
-          "description": "Update --font-serif to Inter with sans-serif fallback stack"
+          "description": "Update --font-serif to Source Serif 4 with serif fallback stack"
         },
         {
           "file": "src/styles/typography.css",
           "action": "replace-css-variable",
-          "description": "Update --font-family-serif to Inter with sans-serif fallback stack"
+          "description": "Update --font-family-serif to Source Serif 4 with serif fallback stack"
         },
         {
           "file": "design-map.json",
           "action": "update-typography-assignments",
-          "description": "Update typographyAssignments.font-serif.resolvedFont to Inter"
+          "description": "Update typographyAssignments.font-serif.resolvedFont to Source Serif 4"
         }
       ]
     },
@@ -2001,13 +2001,13 @@
     "font-sans": {
       "token": "font-definitions/font-family-sans",
       "cssVar": "--font-family-sans",
-      "resolvedFont": "SF Pro Rounded",
+      "resolvedFont": "Inter",
       "usage": "Headings, button labels, UI controls"
     },
     "font-serif": {
       "token": "font-definitions/font-family-serif",
       "cssVar": "--font-family-serif",
-      "resolvedFont": "Inter",
+      "resolvedFont": "Source Serif 4",
       "usage": "Card descriptions, body text, supporting copy"
     },
     "font-mono": {
@@ -2176,6 +2176,14 @@
       "tokensChanged": [],
       "componentsChanged": [],
       "notes": "First native-MCP sync (/sync-native), one-time migration run. File guard passed: live file oodzXY4lwyWIu5qK05VTP7. Matched on figmaVariableId across 4 mapped collections. Value changes: 0. Binding changes: 0 (legacy aliasOf matched the live light-mode target on all 106 tokens). Naming migration (not renames): figmaName switched from leaf name to full Figma path on 85 tokens (21 were already full paths); map keys, codeToken and tailwindKey unchanged. aliasTargets backfilled on all 106 mapped tokens with full per-mode chains (79 alias modes, 54 raw modes set to null). NEW: 43 draft entries (semantic-colors 27, spacing 16). These are PRE-EXISTING Figma variables the old sync never mapped, not variables created today. 30 new-unreviewed, 13 ignored-candidate (2 obra-shadcn-docs, 11 spacing/hacks-to-fit-scale). codeToken/tailwindKey null; not written to CSS/Tailwind. MISSING: 0. Multi-mode chain-hop warnings: 0. No code files changed."
+    },
+    {
+      "timestamp": "2026-09-29T17:20:41Z",
+      "direction": "figma-to-code",
+      "action": "native-sync",
+      "tokensChanged": ["general/primary", "general/destructive", "font-definitions/font-family-sans", "font-definitions/font-family-serif", "font-definitions/font-family-headings", "font-definitions/font-family-body", "heading-1/font-family", "heading-2/font-family", "heading-3/font-family", "heading-4/font-family"],
+      "componentsChanged": [],
+      "notes": "File guard passed: live file oodzXY4lwyWIu5qK05VTP7. Matched on figmaVariableId across 4 mapped collections (149 variables, no truncation, no multi-mode chain hops). Value changes: 9 token-modes (primary light+dark, destructive light, font-family-sans, font-family-serif, font-family-headings, heading-1..4/font-family). Binding changes: 9 token-modes (primary light amber/700>blue/500, primary dark brand-neutrals/100>blue/200, destructive light red/600>orange/300, font-family-headings sans>serif, font-family-body serif>sans (value unchanged Inter), heading-1..4/font-family font-family-headings>font-family-sans). Font swap: sans SF Pro Rounded>Inter, serif Inter>Source Serif 4; CDN href now loads Inter + Source Serif 4 at 400/500/600/700. figmaName renames: 0. NEW: 0. MISSING: 0."
     }
   ]
 }
