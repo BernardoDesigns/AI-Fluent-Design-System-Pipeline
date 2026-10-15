@@ -2,7 +2,7 @@
 
 **A Figma-to-code design token pipeline run by Claude Code.** A designer changes a variable in Figma, runs one command, and Claude Code reads the live file, diffs every token against a mapping layer, opens a branch, updates the code, and pushes it for review. No hand-copied hex values, no drift between design and production.
 
-[Live demo](https://ai-design-system-poc.vercel.app) · [Case study](https://www.bellwetherdesigns.io) · Built by [Bernardo Garcia](https://www.bellwetherdesigns.io)
+[Live demo](https://ai-design-system-poc.vercel.app) · [Case study](https://www.bellwetherdesigns.io/projects/design-system-poc) · Built by [Bernardo Garcia](https://www.bellwetherdesigns.io)
 
 ---
 
