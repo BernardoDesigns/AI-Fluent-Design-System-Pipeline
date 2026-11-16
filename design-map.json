@@ -1,7 +1,7 @@
 {
   "$schema": "design-map-v1",
   "version": "1.0.0",
-  "lastSynced": "2026-09-29T18:04:41Z",
+  "lastSynced": "2026-11-16T17:48:44Z",
   "lastSyncDirection": "figma-to-code",
 
   "meta": {
@@ -52,9 +52,9 @@
           "resolvedType": "COLOR",
           "codeToken": "--primary",
           "tailwindKey": "primary",
-          "values": { "light": "#EA580C", "dark": "#FED7AA" },
-          "aliasOf": "orange/600",
-          "aliasTargets": { "light": { "id": "VariableID:534:30361", "name": "orange/600", "chain": [ { "id": "VariableID:534:30361", "name": "orange/600" } ] }, "dark": { "id": "VariableID:534:30357", "name": "orange/200", "chain": [ { "id": "VariableID:534:30357", "name": "orange/200" } ] } },
+          "values": { "light": "#171717", "dark": "#E5E5E5" },
+          "aliasOf": "brand-neutrals/900",
+          "aliasTargets": { "light": { "id": "VariableID:1699:12", "name": "brand-neutrals/900", "chain": [ { "id": "VariableID:1699:12", "name": "brand-neutrals/900" }, { "id": "VariableID:6:110", "name": "neutral/900" } ] }, "dark": { "id": "VariableID:1699:5", "name": "brand-neutrals/200", "chain": [ { "id": "VariableID:1699:5", "name": "brand-neutrals/200" }, { "id": "VariableID:6:103", "name": "neutral/200" } ] } },
           "description": "Primary action color"
         },
         "general/primary-foreground": {
@@ -140,9 +140,9 @@
           "resolvedType": "COLOR",
           "codeToken": "--destructive",
           "tailwindKey": "destructive",
-          "values": { "light": "#C026D3", "dark": "#F0ABFC" },
-          "aliasOf": "fuchsia/600",
-          "aliasTargets": { "light": { "id": "VariableID:534:30471", "name": "fuchsia/600", "chain": [ { "id": "VariableID:534:30471", "name": "fuchsia/600" } ] }, "dark": { "id": "VariableID:534:30468", "name": "fuchsia/300", "chain": [ { "id": "VariableID:534:30468", "name": "fuchsia/300" } ] } },
+          "values": { "light": "#DC2626", "dark": "#F87171" },
+          "aliasOf": "red/600",
+          "aliasTargets": { "light": { "id": "VariableID:16:1997", "name": "red/600", "chain": [ { "id": "VariableID:16:1997", "name": "red/600" } ] }, "dark": { "id": "VariableID:16:1995", "name": "red/400", "chain": [ { "id": "VariableID:16:1995", "name": "red/400" } ] } },
           "description": "Danger and error states"
         },
         "general/destructive-foreground": {
@@ -2192,6 +2192,14 @@
       "tokensChanged": ["general/primary", "general/destructive", "font-definitions/font-family-sans", "font-definitions/font-family-headings", "font-definitions/font-family-body", "heading-1/font-family", "heading-2/font-family", "heading-3/font-family", "heading-4/font-family"],
       "componentsChanged": [],
       "notes": "File guard passed: live file oodzXY4lwyWIu5qK05VTP7. Matched on figmaVariableId across 4 mapped collections (149 variables, no multi-mode chain hops, no unresolved aliases). Value changes: primary light #3B82F6>#EA580C, dark #BFDBFE>#FED7AA; destructive light #FDBA74>#C026D3, dark #9E4042>#F0ABFC; font-family-sans Inter>SF Pro Rounded; font-family-headings Source Serif 4>SF Pro Rounded; font-family-body Inter>Source Serif 4; heading-1..4/font-family Inter>SF Pro Rounded. Binding changes: primary light blue/500>orange/600, dark blue/200>orange/200; destructive light orange/300>fuchsia/600, dark raw>fuchsia/300; font-family-headings serif>sans; font-family-body sans>serif. heading-1..4 bindings unchanged (still font-family-sans). Font swap: sans back to SF Pro Rounded (system, removed from Google Fonts href); fontConfig.sans restored to system config. figmaName renames: 0. NEW: 0. MISSING: 0."
+    },
+    {
+      "timestamp": "2026-11-16T17:48:44Z",
+      "direction": "figma-to-code",
+      "action": "native-sync",
+      "tokensChanged": ["general/primary", "general/destructive"],
+      "componentsChanged": [],
+      "notes": "File guard passed: live file oodzXY4lwyWIu5qK05VTP7. Matched on figmaVariableId across 4 mapped collections (149 variables, no truncation, no multi-mode chain hops, no unresolved aliases). Value changes: primary light #EA580C>#171717, dark #FED7AA>#E5E5E5; destructive light #C026D3>#DC2626, dark #F0ABFC>#F87171. Binding changes: primary light orange/600>brand-neutrals/900, dark orange/200>brand-neutrals/200; destructive light fuchsia/600>red/600, dark fuchsia/300>red/400. Restores shadcn defaults for both demo tokens. figmaName renames: 0. NEW: 0. MISSING: 0."
     }
   ]
 }
