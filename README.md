@@ -19,6 +19,7 @@ Figma (live file)
    │  native Figma MCP, read-only
    ▼
 Claude Code  ──reads──▶  design-map.json  (the "Rosetta Stone")
+   │        ◀──looks up──  Storybook MCP  (components manifest)
    │
    │  match by variable ID → diff names, alias bindings, values
    ▼
@@ -32,6 +33,17 @@ New git branch → updated CSS tokens + map → commit → push → PR → Verce
 5. **Guardrails.** New Figma variables become draft map entries marked `new-unreviewed` and never reach CSS until a human approves them. Variables missing from Figma are flagged, never deleted.
 6. **Ship.** If anything changed, Claude creates a `design-system-update/token-sync-<timestamp>` branch, updates the code and the map, commits, and pushes. If nothing changed, it says so and touches nothing.
 
+## Component lookups (Storybook MCP)
+
+Tokens are half the system. When Claude Code builds or changes UI, it checks the real component library first instead of guessing from memory.
+
+- Storybook generates a **components manifest** from the stories and component code: every component, prop, variant and default.
+- The `@storybook/addon-mcp` addon serves that manifest at `localhost:6006/mcp`. It's registered for this project as `dspoc-storybook` in `.mcp.json`.
+- `CLAUDE.md` tells the agent to call `docs-list` and `docs-show` before building, never to guess props, and to end every prototype with a list of which system components it used and anything it had to invent.
+- Storybook's starter example stories are tagged `!manifest`, so the agent can't mistake them for real components.
+
+Launch order matters: MCP servers connect when a Claude Code session starts, so start Storybook first. If it comes up later, reconnect with `/mcp`. `/project:demo-prep` checks this.
+
 ## What's in the map today
 
 | Collection | Tokens | Modes |
@@ -41,7 +53,7 @@ New git branch → updated CSS tokens + map → commit → push → PR → Verce
 | Spacing | 27 | default |
 | Border radii | 10 | default |
 
-That's 149 variables plus mapped `button` and `card` components, with 21 logged syncs in `design-map.json → syncLog`.
+That's 149 variables plus mapped `button` and `card` components, with 22 logged syncs in `design-map.json → syncLog`.
 
 ## Slash commands
 
@@ -52,7 +64,7 @@ Project-scoped Claude Code commands live in `.claude/commands/`, so anyone who c
 | `/project:status` | Pre-flight check: Figma connection, file guard, git state, dependencies |
 | `/project:sync` | Full Figma → code sync over the native Figma MCP |
 | `/project:map` | Quick summary of everything in `design-map.json` |
-| `/project:demo-prep` | Checklist that verifies every piece is ready for a live demo |
+| `/project:demo-prep` | Checklist that verifies every piece is ready for a live demo, including the Storybook MCP connection |
 | `/project:reset` | Emergency reset to a clean `main` with caches cleared |
 | `/project:sync-legacy` | Retired. Kept for reference only |
 
@@ -64,10 +76,11 @@ Project-scoped Claude Code commands live in `.claude/commands/`, so anyone who c
 | `design-map-schema-reference.md` | Full schema documentation for the map |
 | `FINDINGS.md` | Issues the pipeline surfaced in the source Figma file (see below) |
 | `CLAUDE.md` | Project instructions Claude Code reads at the start of every session |
+| `.mcp.json` | Registers the Storybook MCP server for this project |
 | `src/styles/` | Generated token CSS (colors, typography, spacing, radius) |
 | `src/components/ui/` | shadcn/ui components that consume the tokens |
 | `src/stories/` | Storybook stories for every component |
-| `sync.sh` | Restarts the local dev server with a clean build cache |
+| `sync.sh` | Restarts the local dev server with a clean build cache. Runs in the current tab, so Ctrl+C stops it |
 
 ## What the pipeline found
 
@@ -88,15 +101,17 @@ Reading every variable and every alias chain turned out to be a useful design au
 
 ## Stack
 
-Next.js 16 (App Router) · React 19 · TypeScript · Tailwind CSS v4 · shadcn/ui · Radix · Storybook 10 · Claude Code · Figma MCP · Vercel
+Next.js 16 (App Router) · React 19 · TypeScript · Tailwind CSS v4 · shadcn/ui · Radix · Storybook 10 + MCP addon · Claude Code · Figma MCP · Vercel
 
 ## Run it locally
 
 ```bash
 npm install
 npm run dev          # http://localhost:3000
-npm run storybook    # http://localhost:6006
+npm run storybook    # http://localhost:6006 (also serves the MCP at /mcp)
 ```
+
+Start each in its own terminal tab, then launch Claude Code from the repo root so it picks up `.mcp.json`. `./sync.sh` is an alternative to `npm run dev` that clears the Next.js cache first.
 
 The sync itself needs Claude Code with the Figma MCP connected and access to the source Figma file, so it's a demo of the approach more than a drop-in tool.
 
