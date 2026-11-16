@@ -6,7 +6,6 @@ lsof -ti :3000 | xargs kill -9 2>/dev/null
 # Clear Next.js build cache
 rm -rf .next
 
-# Start dev server in background
-npx next dev &
-
-echo "Server restarting on localhost:3000"
+# Run the dev server in this tab (foreground) so Ctrl+C or closing the tab stops it
+echo "Starting dev server on localhost:3000 (Ctrl+C to stop)"
+exec npx next dev
