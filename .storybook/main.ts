@@ -4,8 +4,13 @@ const config: StorybookConfig = {
   "stories": [
     "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"
   ],
-  "addons": [],
+  "addons": [
+    "@storybook/addon-mcp"
+  ],
   "framework": "@storybook/nextjs-vite",
+  "features": {
+    "componentsManifest": true
+  },
   "staticDirs": [
     "../public"
   ]
