@@ -23,5 +23,6 @@ Type `/project:commandname` in Claude Code to run any of these.
 
 - The `sync` command uses "Switch to" as the opening verb intentionally. "Create" and "Build" trigger Claude Code built-in skills and cause problems.
 - Figma access is the native Figma MCP (`plugin:figma:figma`, `use_figma` tool). Commands that touch Figma run a read-only file-key guard first (live file `oodzXY4lwyWIu5qK05VTP7`) and stop on any other key. If the tool is missing, reconnect with `/mcp`.
+- Component lookups go through the Storybook MCP (`dspoc-storybook`, `localhost:6006/mcp`, set up in `.mcp.json`). Start `npm run storybook` before launching Claude Code; if it was started later, reconnect with `/mcp`. `/project:demo-prep` checks this.
 - The Figma Console MCP / Desktop Bridge is retired. See the teardown section in `reset.md`.
 - These are project-scoped commands (committed to the repo). Team members get them automatically on clone.
